@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#070809">
-<title>PhotographyCourses Pro 2.0 — Stage 2 Photography Engine</title>
+<title>PhotographyCourses Pro 2.0 — Realistic Camera Rebuild</title>
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/camera.css">
 <link rel="stylesheet" href="css/academy.css">
@@ -28,6 +28,7 @@
 <link rel="stylesheet" href="css/v16.css">
 <link rel="stylesheet" href="css/pro-stage1.css">
 <link rel="stylesheet" href="css/pro-stage2.css">
+<link rel="stylesheet" href="css/pro-real-camera.css">
 <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
@@ -72,6 +73,158 @@
 </section>
 
 
+
+
+<section id="proRealCamera" class="pro-real-camera" aria-label="PhotographyCourses Pro original virtual camera">
+  <div class="pro-camera-stage">
+    <svg class="pro-camera-body-svg" viewBox="0 0 1160 760" role="img" aria-label="Original professional camera body">
+      <defs>
+        <linearGradient id="bodyGrad" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stop-color="#34383b"/>
+          <stop offset=".18" stop-color="#181b1e"/>
+          <stop offset=".55" stop-color="#090b0d"/>
+          <stop offset="1" stop-color="#020304"/>
+        </linearGradient>
+        <linearGradient id="edgeGrad" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#697077"/>
+          <stop offset=".15" stop-color="#23272b"/>
+          <stop offset="1" stop-color="#050607"/>
+        </linearGradient>
+        <radialGradient id="buttonGrad" cx=".35" cy=".25" r=".8">
+          <stop offset="0" stop-color="#70777d"/>
+          <stop offset=".28" stop-color="#24282c"/>
+          <stop offset="1" stop-color="#050607"/>
+        </radialGradient>
+        <pattern id="gripPattern" width="7" height="7" patternUnits="userSpaceOnUse">
+          <circle cx="2" cy="2" r="1.2" fill="#45494c"/>
+          <circle cx="5.5" cy="5.3" r="1.3" fill="#111315"/>
+        </pattern>
+        <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+          <feDropShadow dx="0" dy="24" stdDeviation="18" flood-color="#000" flood-opacity=".78"/>
+        </filter>
+        <filter id="rough">
+          <feTurbulence type="fractalNoise" baseFrequency=".7" numOctaves="2" seed="8" result="noise"/>
+          <feColorMatrix in="noise" type="saturate" values="0" result="mono"/>
+          <feBlend in="SourceGraphic" in2="mono" mode="soft-light"/>
+        </filter>
+      </defs>
+
+      <g filter="url(#shadow)">
+        <path d="M175 178 Q188 102 278 86 L412 78 Q447 20 508 20 H652 Q713 20 748 78 L895 92 Q982 100 1005 190 L1038 610 Q1044 686 972 708 H189 Q112 697 120 620 Z"
+          fill="url(#bodyGrad)" stroke="#555d64" stroke-width="4"/>
+        <path d="M180 189 Q202 122 286 113 L412 104 Q454 57 508 56 H650 Q707 57 746 104 L889 116 Q960 124 978 198"
+          fill="none" stroke="rgba(255,255,255,.14)" stroke-width="8"/>
+        <path d="M804 144 Q988 133 1010 260 L1037 616 Q1043 684 973 706 L866 706 Q833 669 833 609 Z"
+          fill="url(#gripPattern)" stroke="#34393d" stroke-width="3"/>
+        <path d="M842 210 Q970 196 981 310 L1002 573 Q1007 636 953 660 L879 660 Q852 632 850 583 Z"
+          fill="url(#gripPattern)" opacity=".9"/>
+      </g>
+
+      <!-- pentaprism and hot shoe -->
+      <path d="M438 111 L481 45 H678 L722 112 L699 169 H459 Z" fill="#111417" stroke="#545b61" stroke-width="4"/>
+      <rect x="506" y="43" width="148" height="45" rx="8" fill="#090b0d" stroke="#7b8288" stroke-width="3"/>
+      <rect x="525" y="28" width="110" height="28" rx="5" fill="#2e3337" stroke="#9aa0a5" stroke-width="3"/>
+      <rect x="543" y="32" width="74" height="16" rx="2" fill="#050607"/>
+      <path d="M530 28 V55 M630 28 V55" stroke="#b5babd" stroke-width="6"/>
+
+      <!-- viewfinder -->
+      <path d="M450 174 Q460 135 507 129 H651 Q698 135 708 174 L727 282 H431 Z" fill="url(#edgeGrad)" stroke="#4b5258" stroke-width="4"/>
+      <rect x="477" y="162" width="202" height="99" rx="16" fill="#050607" stroke="#383e43" stroke-width="10"/>
+      <rect x="507" y="181" width="142" height="63" rx="8" fill="#010102" stroke="#111418" stroke-width="4"/>
+      <ellipse cx="557" cy="210" rx="25" ry="18" fill="#3e155f" opacity=".75"/>
+      <ellipse cx="599" cy="210" rx="25" ry="18" fill="#7a1828" opacity=".7"/>
+
+      <!-- top LCD -->
+      <rect x="748" y="121" width="230" height="88" rx="12" fill="#111417" stroke="#555d63" stroke-width="5"/>
+      <rect x="761" y="133" width="204" height="62" rx="6" fill="#b8cf9d" stroke="#4d5a49" stroke-width="3"/>
+      <text x="775" y="157" fill="#1d281b" font-size="18" font-family="monospace">M</text>
+      <text id="proRealTopShutter" x="820" y="159" fill="#1d281b" font-size="25" font-family="monospace">1/125</text>
+      <text id="proRealTopAperture" x="894" y="159" fill="#1d281b" font-size="25" font-family="monospace">F5.6</text>
+      <text id="proRealTopIso" x="890" y="185" fill="#1d281b" font-size="17" font-family="monospace">ISO 100</text>
+      <path d="M777 180 H870" stroke="#1d281b" stroke-width="2"/>
+      <circle cx="823" cy="180" r="3" fill="#1d281b"/>
+
+      <!-- mode dial -->
+      <g id="proRealModeDial" class="pro-real-control" tabindex="0">
+        <circle cx="285" cy="144" r="67" fill="#090b0d" stroke="#626970" stroke-width="4"/>
+        <circle cx="285" cy="144" r="53" fill="none" stroke="#2d3236" stroke-width="12" stroke-dasharray="3 5"/>
+        <circle cx="285" cy="144" r="38" fill="url(#buttonGrad)" stroke="#6a7177" stroke-width="3"/>
+        <text x="278" y="102" fill="#fff" font-size="15">M</text>
+        <text x="318" y="121" fill="#fff" font-size="15">A</text>
+        <text x="325" y="161" fill="#fff" font-size="15">S</text>
+        <text x="302" y="193" fill="#fff" font-size="15">P</text>
+        <text x="249" y="190" fill="#fff" font-size="14">AUTO</text>
+        <path d="M285 69 l-8 15 h16z" fill="#f7c600"/>
+      </g>
+
+      <!-- power switch -->
+      <path d="M235 222 Q285 188 335 222" fill="none" stroke="#51585e" stroke-width="16" stroke-linecap="round"/>
+      <rect id="proRealPowerSwitch" class="pro-real-control" x="276" y="200" width="22" height="42" rx="10" fill="#b4bbc0" stroke="#25292c" stroke-width="4"/>
+      <text x="224" y="254" fill="#f0f2f3" font-size="17">OFF</text>
+      <text x="315" y="254" fill="#f0f2f3" font-size="17">ON</text>
+
+      <!-- menu/info -->
+      <g id="proRealMenuButton" class="pro-real-control">
+        <circle cx="286" cy="316" r="36" fill="url(#buttonGrad)" stroke="#656d73" stroke-width="3"/>
+        <text x="257" y="323" fill="#fff" font-size="18">MENU</text>
+      </g>
+      <g id="proRealInfoButton" class="pro-real-control">
+        <circle cx="374" cy="316" r="36" fill="url(#buttonGrad)" stroke="#656d73" stroke-width="3"/>
+        <text x="353" y="323" fill="#fff" font-size="18">INFO</text>
+      </g>
+
+      <!-- rear buttons -->
+      <g id="proRealAfOn" class="pro-real-control">
+        <circle cx="813" cy="286" r="34" fill="url(#buttonGrad)" stroke="#666e74" stroke-width="3"/>
+        <text x="784" y="246" fill="#fff" font-size="17">AF-ON</text>
+      </g>
+      <g class="pro-real-control"><circle cx="894" cy="296" r="28" fill="url(#buttonGrad)" stroke="#666e74" stroke-width="3"/><text x="882" y="302" fill="#fff" font-size="16">★</text></g>
+      <g class="pro-real-control"><circle cx="957" cy="301" r="28" fill="url(#buttonGrad)" stroke="#666e74" stroke-width="3"/><text x="947" y="307" fill="#fff" font-size="16">Q</text></g>
+
+      <!-- LCD bezel -->
+      <rect x="318" y="355" width="548" height="318" rx="22" fill="#050607" stroke="#555d63" stroke-width="8"/>
+      <rect x="337" y="374" width="510" height="280" rx="10" fill="#000" stroke="#15191c" stroke-width="3"/>
+
+      <!-- rear command wheel -->
+      <g id="proRealRearDial" class="pro-real-control" tabindex="0">
+        <circle cx="915" cy="500" r="83" fill="#07090a" stroke="#656d73" stroke-width="4"/>
+        <circle cx="915" cy="500" r="68" fill="none" stroke="#252a2e" stroke-width="15" stroke-dasharray="4 5"/>
+        <circle cx="915" cy="500" r="45" fill="url(#buttonGrad)" stroke="#5a6268" stroke-width="3"/>
+        <circle cx="915" cy="500" r="24" fill="#121518" stroke="#70777d" stroke-width="3"/>
+        <text x="897" y="507" fill="#fff" font-size="17">SET</text>
+        <path d="M915 425 l-8 14 h16z M915 575 l-8-14 h16z M840 500 l14-8 v16z M990 500 l-14-8 v16z" fill="#e8ecef"/>
+      </g>
+
+      <!-- screws -->
+      <g fill="#25292c" stroke="#8b9297" stroke-width="2">
+        <circle cx="196" cy="199" r="9"/><circle cx="987" cy="220" r="9"/><circle cx="207" cy="650" r="9"/><circle cx="990" cy="665" r="9"/>
+      </g>
+      <g stroke="#050607" stroke-width="2">
+        <path d="M190 199 h12 M196 193 v12 M981 220 h12 M987 214 v12 M201 650 h12 M207 644 v12 M984 665 h12 M990 659 v12"/>
+      </g>
+
+      <!-- lower controls -->
+      <g class="pro-real-control"><circle cx="883" cy="625" r="28" fill="url(#buttonGrad)" stroke="#596168" stroke-width="3"/><text x="872" y="632" fill="#53c8ff" font-size="20">▶</text></g>
+      <g class="pro-real-control"><circle cx="951" cy="625" r="28" fill="url(#buttonGrad)" stroke="#596168" stroke-width="3"/><text x="941" y="632" fill="#53c8ff" font-size="20">⌫</text></g>
+
+      <text x="540" y="704" fill="#8d9499" font-size="22" font-weight="700">PHOTOGRAPHYCOURSES PRO</text>
+    </svg>
+
+    <div class="pro-real-lcd">
+      <img id="proRealSceneImage" alt="Virtual camera live view">
+      <div class="pro-real-grid"></div>
+      <div class="pro-real-focus-box"></div>
+      <div class="pro-real-readout pro-real-readout-top">
+        <strong id="proRealMode">M</strong><strong id="proRealAf">AF-S</strong><strong>999</strong>
+      </div>
+      <div class="pro-real-readout pro-real-readout-bottom">
+        <strong id="proRealShutter">1/125</strong><strong id="proRealAperture">F5.6</strong><span>−3··2··1··0··1··2··3</span><strong id="proRealIso">ISO 100</strong>
+      </div>
+    </div>
+
+    <button id="proRealShutterButton" class="pro-real-shutter" title="Take photograph"></button>
+  </div>
+</section>
 
 <section id="proStage2Layer" class="pro-stage2-layer" aria-label="Photography simulation engine">
   <button id="proEngineToggle" class="pro-engine-toggle">ENGINE</button>
@@ -1983,6 +2136,7 @@
 <script defer src="js/v16.js"></script>
 <script defer src="js/pro-stage1.js"></script>
 <script defer src="js/pro-stage2.js"></script>
+<script defer src="js/pro-real-camera.js"></script>
 <script src="js/academy.js"></script>
 <script src="js/coach.js"></script>
 </div>
