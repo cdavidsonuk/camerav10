@@ -1,0 +1,54 @@
+
+body.pro-real2-active #proRealCamera{display:none!important}
+body.pro-real2-active .v11-camera-shell,
+body.pro-real2-active .pro-top-deck,
+body.pro-real2-active .pro-rear-dial,
+body.pro-real2-active .pro-viewfinder-button,
+body.pro-real2-active .pro-q-button{display:none!important}
+
+.pro-real-camera-v2{
+  position:absolute;left:50%;top:135px;width:min(980px,68vw);
+  transform:translateX(-50%);z-index:59;pointer-events:none;
+}
+.pro-real2-stage{position:relative;width:100%;aspect-ratio:1600/980}
+.pro-real2-body{position:absolute;inset:0;width:100%;height:100%;display:block}
+.pro-real2-lcd{
+  position:absolute;left:28.08%;top:48.15%;width:40.65%;height:35.2%;
+  overflow:hidden;border-radius:8px;background:#000;pointer-events:auto;
+}
+.pro-real2-lcd>img{width:100%;height:100%;object-fit:cover;transition:filter .18s,transform .18s}
+.pro-real2-grid{position:absolute;inset:0;background:
+ linear-gradient(90deg,transparent 33.1%,rgba(255,255,255,.22) 33.3% 33.55%,transparent 33.7% 66.3%,rgba(255,255,255,.22) 66.45% 66.7%,transparent 66.9%),
+ linear-gradient(transparent 33.1%,rgba(255,255,255,.22) 33.3% 33.55%,transparent 33.7% 66.3%,rgba(255,255,255,.22) 66.45% 66.7%,transparent 66.9%);
+}
+.pro-real2-focus{position:absolute;left:50%;top:47%;width:13%;height:18%;transform:translate(-50%,-50%);border:2px solid rgba(255,255,255,.92)}
+.pro-real2-top,.pro-real2-bottom{position:absolute;left:0;right:0;display:flex;align-items:center;color:#fff;font-family:monospace;text-shadow:0 2px 4px #000}
+.pro-real2-top{top:0;justify-content:space-between;padding:10px 13px}
+.pro-real2-bottom{bottom:0;gap:16px;padding:10px 13px;background:linear-gradient(transparent,rgba(0,0,0,.8))}
+.pro-real2-bottom span{flex:1;text-align:center;font-size:.67rem}
+.pro-real2-hotspot{position:absolute;pointer-events:auto;border:0;background:transparent;cursor:pointer;border-radius:50%}
+.pro-real2-hotspot:focus-visible{outline:3px solid #f6c600;outline-offset:3px}
+.pro-real2-mode{left:15.5%;top:10.7%;width:11.5%;height:18.7%}
+.pro-real2-power{left:18.6%;top:27.8%;width:7.5%;height:8%}
+.pro-real2-menu{left:16.9%;top:38.2%;width:5.8%;height:8.7%}
+.pro-real2-info{left:22.5%;top:38.2%;width:5.8%;height:8.7%}
+.pro-real2-afon{left:70.8%;top:34.8%;width:5.5%;height:8.5%}
+.pro-real2-q{left:81.2%;top:39%;width:4.8%;height:7.5%}
+.pro-real2-rear{left:71.2%;top:51%;width:14.5%;height:23%}
+.pro-real2-shutter{left:73.9%;top:9.2%;width:5.2%;height:8.7%}
+
+.pro-challenge-panel .pro-challenge-close{
+  width:31px;height:31px;border-radius:50%;border:1px solid #4a545d;background:#11161a;color:white;
+  font-size:20px;line-height:1;display:grid;place-items:center;cursor:pointer
+}
+.pro-challenge-panel.is-hidden{display:none}
+.pro-challenge-panel header{gap:8px}
+.pro-challenge-panel header span{margin-right:auto}
+
+@media(max-width:1100px){.pro-real-camera-v2{width:78vw;top:155px}}
+@media(max-width:760px){
+  .pro-real-camera-v2{position:relative;left:auto;top:auto;width:99vw;transform:none;margin:150px auto 300px}
+  .pro-real2-top{font-size:.62rem;padding:5px 7px}
+  .pro-real2-bottom{font-size:.55rem;padding:5px 7px;gap:5px}
+  .pro-real2-bottom span{font-size:.42rem}
+}

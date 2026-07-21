@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 980">
+<defs>
+  <linearGradient id="body" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#52585d"/>
+    <stop offset=".06" stop-color="#2c3135"/>
+    <stop offset=".18" stop-color="#14181b"/>
+    <stop offset=".62" stop-color="#080a0c"/>
+    <stop offset="1" stop-color="#020304"/>
+  </linearGradient>
+  <linearGradient id="bevel" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8b9298"/>
+    <stop offset=".08" stop-color="#343a3f"/>
+    <stop offset=".35" stop-color="#121518"/>
+    <stop offset="1" stop-color="#030405"/>
+  </linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#2d3236"/>
+    <stop offset=".4" stop-color="#111417"/>
+    <stop offset="1" stop-color="#050607"/>
+  </linearGradient>
+  <radialGradient id="button" cx=".32" cy=".23" r=".82">
+    <stop offset="0" stop-color="#a0a6ab"/>
+    <stop offset=".18" stop-color="#50565b"/>
+    <stop offset=".47" stop-color="#202428"/>
+    <stop offset="1" stop-color="#050607"/>
+  </radialGradient>
+  <radialGradient id="wheel" cx=".35" cy=".25" r=".8">
+    <stop offset="0" stop-color="#3c4246"/>
+    <stop offset=".55" stop-color="#111417"/>
+    <stop offset="1" stop-color="#030405"/>
+  </radialGradient>
+  <linearGradient id="lcd" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#d4e3b9"/>
+    <stop offset="1" stop-color="#9bb27d"/>
+  </linearGradient>
+  <pattern id="rubber" width="12" height="12" patternUnits="userSpaceOnUse">
+    <rect width="12" height="12" fill="#131619"/>
+    <circle cx="3" cy="3" r="1.8" fill="#3c4145"/>
+    <circle cx="9" cy="8" r="2.1" fill="#090b0d"/>
+    <path d="M0 11L11 0M6 12L12 6" stroke="#24282c" stroke-width=".8" opacity=".65"/>
+  </pattern>
+  <pattern id="fine" width="5" height="5" patternUnits="userSpaceOnUse">
+    <circle cx="1.5" cy="1.5" r=".7" fill="#41464a"/>
+    <circle cx="4" cy="4" r=".7" fill="#090b0c"/>
+  </pattern>
+  <filter id="shadow" x="-30%" y="-30%" width="170%" height="180%">
+    <feDropShadow dx="0" dy="30" stdDeviation="22" flood-color="#000" flood-opacity=".85"/>
+  </filter>
+  <filter id="innerShadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feOffset dx="0" dy="5"/>
+    <feGaussianBlur stdDeviation="7" result="blur"/>
+    <feComposite in="SourceGraphic" in2="blur" operator="out" result="inverse"/>
+    <feFlood flood-color="#000" flood-opacity=".75"/>
+    <feComposite in2="inverse" operator="in"/>
+    <feComposite in="SourceGraphic"/>
+  </filter>
+</defs>
+
+<g filter="url(#shadow)">
+  <!-- main chassis -->
+  <path d="M208 235 Q222 132 338 118 L545 104 Q591 38 665 30 H923 Q997 38 1043 104 L1245 121 Q1350 136 1370 245 L1410 777 Q1418 888 1311 922 H250 Q143 897 153 785 Z"
+        fill="url(#body)" stroke="#656d73" stroke-width="6"/>
+  <path d="M224 240 Q242 158 342 145 L558 133 Q610 71 674 67 H913 Q979 71 1030 133 L1232 150 Q1317 161 1334 251"
+        fill="none" stroke="#b9c0c5" stroke-opacity=".17" stroke-width="12" stroke-linecap="round"/>
+  <path d="M164 770 Q157 895 267 917 H1293 Q1407 902 1407 781" fill="none" stroke="#000" stroke-opacity=".65" stroke-width="22"/>
+
+  <!-- left shoulder -->
+  <path d="M194 256 Q205 162 335 143 L475 133 L466 327 L178 340 Z" fill="url(#panel)" stroke="#454c51" stroke-width="4"/>
+  <path d="M204 258 Q217 183 330 165" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="8"/>
+
+  <!-- right grip -->
+  <path d="M1180 150 Q1348 151 1372 281 L1405 776 Q1413 879 1314 914 H1190 Q1147 866 1146 789 L1134 285 Q1132 191 1180 150Z"
+        fill="url(#rubber)" stroke="#444b50" stroke-width="5"/>
+  <path d="M1225 212 Q1327 217 1339 314 L1365 727 Q1370 815 1303 840 H1238 Q1208 804 1208 744 L1197 326 Q1195 252 1225 212Z"
+        fill="url(#fine)" opacity=".92"/>
+  <path d="M1174 194 Q1217 171 1287 184" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="8"/>
+
+  <!-- lower rear plate -->
+  <path d="M244 806 Q254 876 325 888 H1178 Q1237 878 1247 812" fill="url(#panel)" stroke="#3d444a" stroke-width="4"/>
+
+  <!-- pentaprism -->
+  <path d="M574 147 L634 53 H955 L1016 147 L984 245 H605 Z" fill="url(#panel)" stroke="#596168" stroke-width="6"/>
+  <path d="M613 134 L653 78 H937 L977 134" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="9"/>
+
+  <!-- hotshoe -->
+  <rect x="694" y="35" width="205" height="62" rx="9" fill="#0a0c0e" stroke="#879096" stroke-width="5"/>
+  <rect x="717" y="13" width="160" height="43" rx="6" fill="#4c5358" stroke="#b5bcc1" stroke-width="5"/>
+  <rect x="742" y="21" width="110" height="25" rx="3" fill="#07090a"/>
+  <path d="M725 16 V59 M869 16 V59" stroke="#d0d4d7" stroke-width="8"/>
+
+  <!-- viewfinder housing -->
+  <path d="M592 245 Q606 189 671 181 H918 Q983 190 998 245 L1022 406 H568 Z" fill="url(#bevel)" stroke="#555d63" stroke-width="6"/>
+  <rect x="630" y="228" width="330" height="151" rx="26" fill="#080a0c" stroke="#2e3438" stroke-width="17"/>
+  <rect x="679" y="258" width="233" height="92" rx="13" fill="#010102" stroke="#14181b" stroke-width="6"/>
+  <ellipse cx="748" cy="303" rx="38" ry="26" fill="#32185e" opacity=".65"/>
+  <ellipse cx="843" cy="303" rx="38" ry="26" fill="#6c1830" opacity=".58"/>
+  <path d="M646 237 Q789 205 946 238" fill="none" stroke="#fff" stroke-opacity=".08" stroke-width="7"/>
+
+  <!-- LCD bezel -->
+  <rect x="424" y="447" width="700" height="395" rx="30" fill="#050607" stroke="#5c646a" stroke-width="10"/>
+  <rect x="449" y="472" width="650" height="345" rx="12" fill="#000" stroke="#15191c" stroke-width="5"/>
+  <path d="M440 457 Q767 428 1110 456" fill="none" stroke="#fff" stroke-opacity=".09" stroke-width="8"/>
+
+  <!-- mode dial assembly -->
+  <circle cx="337" cy="209" r="92" fill="#080a0c" stroke="#737b81" stroke-width="6"/>
+  <circle cx="337" cy="209" r="77" fill="none" stroke="#2b3034" stroke-width="20" stroke-dasharray="5 8"/>
+  <circle cx="337" cy="209" r="57" fill="url(#wheel)" stroke="#858c91" stroke-width="5"/>
+  <circle cx="337" cy="209" r="36" fill="#111417" stroke="#4c5358" stroke-width="3"/>
+  <text x="328" y="145" fill="#fff" font-size="22" font-family="Arial">M</text>
+  <text x="382" y="172" fill="#fff" font-size="22" font-family="Arial">A</text>
+  <text x="397" y="226" fill="#fff" font-size="22" font-family="Arial">S</text>
+  <text x="369" y="276" fill="#fff" font-size="22" font-family="Arial">P</text>
+  <text x="283" y="273" fill="#fff" font-size="18" font-family="Arial">AUTO</text>
+  <path d="M337 101 l-12 22 h24z" fill="#f6c600"/>
+
+  <!-- top LCD -->
+  <rect x="1062" y="156" width="260" height="108" rx="15" fill="#0b0d0f" stroke="#596168" stroke-width="6"/>
+  <rect x="1078" y="172" width="228" height="77" rx="8" fill="url(#lcd)" stroke="#55624c" stroke-width="4"/>
+  <text x="1092" y="201" fill="#1c281b" font-size="22" font-family="monospace">M</text>
+  <text x="1134" y="205" fill="#1c281b" font-size="31" font-family="monospace">1/125</text>
+  <text x="1235" y="205" fill="#1c281b" font-size="31" font-family="monospace">5.6</text>
+  <text x="1190" y="236" fill="#1c281b" font-size="21" font-family="monospace">ISO 100</text>
+  <path d="M1094 228 H1169" stroke="#1c281b" stroke-width="3"/>
+
+  <!-- left controls -->
+  <g>
+    <circle cx="318" cy="420" r="44" fill="url(#button)" stroke="#727a80" stroke-width="4"/>
+    <text x="278" y="429" fill="#fff" font-size="22" font-family="Arial">MENU</text>
+    <circle cx="407" cy="420" r="44" fill="url(#button)" stroke="#727a80" stroke-width="4"/>
+    <text x="383" y="429" fill="#fff" font-size="22" font-family="Arial">INFO</text>
+  </g>
+
+  <!-- right buttons -->
+  <g>
+    <circle cx="1178" cy="386" r="42" fill="url(#button)" stroke="#747c82" stroke-width="4"/>
+    <text x="1138" y="344" fill="#fff" font-size="20" font-family="Arial">AF-ON</text>
+    <circle cx="1264" cy="405" r="34" fill="url(#button)" stroke="#747c82" stroke-width="4"/>
+    <text x="1252" y="414" fill="#fff" font-size="22">★</text>
+    <circle cx="1335" cy="420" r="34" fill="url(#button)" stroke="#747c82" stroke-width="4"/>
+    <text x="1322" y="429" fill="#fff" font-size="24">Q</text>
+  </g>
+
+  <!-- rear command wheel -->
+  <circle cx="1255" cy="614" r="113" fill="#080a0c" stroke="#737b81" stroke-width="6"/>
+  <circle cx="1255" cy="614" r="92" fill="none" stroke="#2c3135" stroke-width="23" stroke-dasharray="6 8"/>
+  <circle cx="1255" cy="614" r="63" fill="url(#wheel)" stroke="#777f85" stroke-width="5"/>
+  <circle cx="1255" cy="614" r="35" fill="#101316" stroke="#777f85" stroke-width="4"/>
+  <text x="1228" y="623" fill="#fff" font-size="24" font-family="Arial">SET</text>
+  <path d="M1255 491 l-12 22 h24z M1255 737 l-12-22 h24z M1132 614 l22-12 v24z M1378 614 l-22-12 v24z" fill="#e8ecef"/>
+
+  <!-- bottom buttons -->
+  <circle cx="1207" cy="806" r="38" fill="url(#button)" stroke="#666e74" stroke-width="4"/>
+  <text x="1192" y="815" fill="#55cfff" font-size="29">▶</text>
+  <circle cx="1295" cy="806" r="38" fill="url(#button)" stroke="#666e74" stroke-width="4"/>
+  <text x="1280" y="815" fill="#55cfff" font-size="27">⌫</text>
+
+  <!-- shutter and front dial -->
+  <ellipse cx="1221" cy="132" rx="59" ry="44" fill="#090b0d" stroke="#575f65" stroke-width="5"/>
+  <circle cx="1221" cy="132" r="31" fill="url(#button)" stroke="#92999e" stroke-width="5"/>
+  <rect x="1285" y="103" width="82" height="52" rx="21" fill="#0a0c0e" stroke="#555d63" stroke-width="4"/>
+  <path d="M1293 110 h66 M1293 122 h66 M1293 134 h66 M1293 146 h66" stroke="#555d63" stroke-width="3"/>
+
+  <!-- power switch -->
+  <path d="M242 314 Q320 266 397 314" fill="none" stroke="#5c646a" stroke-width="22" stroke-linecap="round"/>
+  <rect x="309" y="279" width="30" height="62" rx="14" fill="#c5cacf" stroke="#23272a" stroke-width="5"/>
+  <text x="213" y="357" fill="#f0f2f3" font-size="22" font-family="Arial">OFF</text>
+  <text x="370" y="357" fill="#f0f2f3" font-size="22" font-family="Arial">ON</text>
+
+  <!-- seams -->
+  <path d="M170 376 H463 M1137 319 H1378 M1127 451 H1390" fill="none" stroke="#fff" stroke-opacity=".06" stroke-width="3"/>
+  <path d="M210 756 H410 M1112 758 H1392" fill="none" stroke="#000" stroke-opacity=".8" stroke-width="4"/>
+
+  <!-- screws -->
+  <g fill="#22272a" stroke="#8c9499" stroke-width="3">
+    <circle cx="224" cy="245" r="11"/><circle cx="1373" cy="260" r="11"/>
+    <circle cx="238" cy="839" r="11"/><circle cx="1351" cy="842" r="11"/>
+    <circle cx="414" cy="335" r="9"/><circle cx="1134" cy="343" r="9"/>
+  </g>
+  <g stroke="#050607" stroke-width="3">
+    <path d="M217 245h14M224 238v14M1366 260h14M1373 253v14M231 839h14M238 832v14M1344 842h14M1351 835v14"/>
+    <path d="M408 335h12M414 329v12M1128 343h12M1134 337v12"/>
+  </g>
+
+  <!-- branding -->
+  <text x="667" y="909" fill="#899198" font-size="28" font-weight="700" font-family="Arial">PHOTOGRAPHYCOURSES PRO</text>
+</g>
+</svg>

@@ -1,10 +1,11 @@
-REALISTIC CAMERA REBUILD
+REALISTIC CAMERA BODY V2
 
-1. Extract the ZIP.
-2. Upload every file and folder to the root of your GitHub repository.
-3. Replace all matching files.
+1. Extract this ZIP.
+2. Upload every file and folder to the root of the GitHub repository.
+3. Replace matching files.
 4. Commit the changes.
-5. Wait for GitHub Pages to deploy.
-6. Refresh using Ctrl + F5.
+5. Wait for GitHub Pages deployment.
+6. Refresh with Ctrl + F5.
 
-This package includes Stage 1 and Stage 2.
+The reusable camera body asset is:
+assets/camera-body-realistic.svg
