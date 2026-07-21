@@ -17,3 +17,36 @@ body.v12-active .v11-lcd img{transition:filter .18s,transform .18s}
 body.v12-active .v11-capture-flash.fire{animation:v12premiumflash .42s ease}@keyframes v12premiumflash{0%{opacity:0}15%{opacity:1}28%{opacity:.35}100%{opacity:0}}
 @media(max-width:1180px){.v12-command-dial,.v12-rear-dial{display:none}.v12-top-display{top:88px}}
 @media(max-width:760px){.v12-top-display{display:none}.v12-menu-panel,.v12-info-panel{right:8px;left:8px;width:auto}.v12-status-ribbon{display:none}}
+
+/* Version 12.1 layout correction */
+body.v12-active .v11-camera-shell{position:relative}
+body.v12-active .v12-command-dial,
+body.v12-active .v12-rear-dial{
+  position:absolute;
+  z-index:12;
+  width:62px;
+  height:62px;
+  right:108px;
+  top:16px;
+}
+body.v12-active .v12-rear-dial{
+  right:25px;
+  top:168px;
+}
+body.v12-active .v12-command-dial span,
+body.v12-active .v12-rear-dial span{
+  left:29px;
+  top:2px;
+  height:10px;
+  transform-origin:2px 29px;
+}
+body.v12-active .v12-command-dial:after,
+body.v12-active .v12-rear-dial:after{inset:13px}
+@media(max-width:1180px){
+  body.v12-active .v12-command-dial,
+  body.v12-active .v12-rear-dial{display:block}
+}
+@media(max-width:820px){
+  body.v12-active .v12-command-dial,
+  body.v12-active .v12-rear-dial{display:none}
+}

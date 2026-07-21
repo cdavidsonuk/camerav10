@@ -40,6 +40,11 @@ function applyProfile(){
 }
 function init(){
  document.body.classList.add("v12-active");
+ const cameraShell=document.querySelector(".v11-camera-shell");
+ if(cameraShell){
+   cameraShell.appendChild($("v12CommandDial"));
+   cameraShell.appendChild($("v12RearDial"));
+ }
  bindDial($("v12CommandDial"),"v11ShutterSelect",false);
  bindDial($("v12RearDial"),"v11ApertureSelect",true);
  $("v11MenuButton").onclick=()=>openPanel("v12MenuPanel");

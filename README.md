@@ -1,26 +1,17 @@
-# PhotographyCourses Virtual Camera — Version 12.0
+# PhotographyCourses Virtual Camera — Version 12.1 Fixed Edition
 
-Version 12 is the Premium Interaction Edition.
+This correction addresses the two problems visible in the Version 12 screenshot.
 
-## Main improvements
+## Fixed
 
-- Premium top information display
-- Scrollable and draggable command dials
-- Shutter-speed dial control
-- Aperture dial control
-- Full camera-style menu system
-- Shooting, focus, display and sound menus
-- Drive mode, metering, white balance and picture profiles
-- Tracking sensitivity and eye-detection controls
-- Camera information panel
-- Button press animation and sound feedback
-- Premium camera-body lighting and materials
-- Improved shutter animation
-- Live status ribbon
-- Better feedback and interaction polish
-- Version 11 simulator remains the core camera system
-- Versions 8–10 remain accessible
+- Added all six missing shooting-scene images
+- Mountain Lake, Portrait Studio, Waterfall, Cyclist, Night City and Wildlife now load locally
+- Repositioned the two Version 12 command dials inside the camera body
+- Dials now scale with the camera instead of using screen-percentage positions
+- Prevented the dials from covering the exposure controls
+- Updated the service-worker cache to Version 12.1
+- Changed caching to prefer newly uploaded files instead of stale cached files
 
-## Important note
+## Upload note
 
-The camera remains an original browser-rendered design rather than a licensed copy of a real manufacturer model.
+Upload every file and folder, including the new `assets/scenes` folder. After deployment, press Ctrl+F5. If an older service worker still appears, close the site tab and reopen it once.
