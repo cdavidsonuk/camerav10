@@ -1,0 +1,204 @@
+
+/* Version 13 — realistic camera body rebuild */
+body.v13-active .v12-command-dial,
+body.v13-active .v12-rear-dial{display:none!important}
+
+body.v13-active .v11-camera-shell{
+  width:min(980px,96%);
+  height:min(650px,78vh);
+  border-radius:72px 72px 96px 96px;
+  background:
+    radial-gradient(circle at 32% 12%,rgba(255,255,255,.12),transparent 18%),
+    radial-gradient(circle at 72% 8%,rgba(255,255,255,.06),transparent 14%),
+    linear-gradient(145deg,#363c42 0%,#171b1f 18%,#0a0c0f 55%,#030405 100%);
+  border:1px solid #656d75;
+  box-shadow:
+    inset 0 3px 2px rgba(255,255,255,.16),
+    inset 0 -55px 95px #000,
+    inset 32px 0 70px rgba(255,255,255,.025),
+    0 50px 110px rgba(0,0,0,.72);
+  overflow:visible;
+}
+body.v13-active .v11-camera-shell:before{
+  inset:8px;
+  border-radius:64px 64px 88px 88px;
+  border:1px solid rgba(255,255,255,.055);
+  box-shadow:inset 0 0 45px rgba(255,255,255,.02);
+}
+body.v13-active .v11-camera-shell:after{
+  background:
+    linear-gradient(110deg,rgba(255,255,255,.09),transparent 17%,transparent 73%,rgba(255,255,255,.025)),
+    repeating-linear-gradient(0deg,rgba(255,255,255,.012) 0 1px,transparent 1px 3px);
+}
+
+body.v13-active .v11-camera-top{
+  height:105px;
+  border-radius:68px 68px 0 0;
+}
+body.v13-active .v11-hotshoe{
+  left:42%;
+  top:-24px;
+  width:170px;
+  height:52px;
+  background:
+    linear-gradient(#535a61,#1a1e22 38%,#07090b 100%);
+  border:1px solid #737b82;
+  box-shadow:inset 0 5px #171a1d,0 10px 18px #000;
+}
+body.v13-active .v11-hotshoe:after{
+  content:"";
+  position:absolute;
+  left:28px;right:28px;top:13px;height:12px;
+  border-radius:3px;
+  background:repeating-linear-gradient(90deg,#0b0d0f 0 12px,#6b7177 12px 14px);
+}
+
+body.v13-active .v11-mode-dial{
+  left:44px;top:22px;width:82px;height:82px;
+  background:repeating-conic-gradient(#646b72 0 5deg,#1b1f23 5deg 10deg);
+  border:5px solid #080a0c;
+  box-shadow:inset 0 0 0 2px #777f86,0 8px 18px #000;
+}
+body.v13-active .v11-mode-dial:after{
+  inset:15px;
+  background:radial-gradient(circle at 35% 28%,#434a50,#111419 70%);
+  border:1px solid #747c83;
+}
+
+body.v13-active .v11-shutter-cluster{
+  right:48px;top:18px;
+}
+body.v13-active .v11-shutter-cluster button:first-child{
+  width:52px;height:52px;
+}
+body.v13-active .v11-shutter-cluster button:last-child{
+  width:76px;height:76px;
+  background:radial-gradient(circle at 35% 28%,#5d646a,#161a1e 55%,#080a0c 100%);
+  border:2px solid #777f86;
+  box-shadow:inset 0 0 0 5px #111419,0 8px 18px #000;
+}
+
+body.v13-active .v11-camera-main{
+  height:455px;
+  grid-template-columns:118px 1fr 138px;
+  gap:16px;
+  padding:12px 24px 6px;
+}
+
+body.v13-active .v11-camera-left-controls,
+body.v13-active .v11-camera-right-controls{
+  justify-content:flex-start;
+  padding-top:42px;
+  gap:18px;
+}
+
+body.v13-active .v11-camera-left-controls button,
+body.v13-active .v11-camera-right-controls>button{
+  width:78px;height:48px;
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 35% 30%,#51585f,#1c2126 50%,#0a0c0e 100%);
+  border:1px solid #727a82;
+  box-shadow:
+    inset 0 1px rgba(255,255,255,.18),
+    inset 0 -4px 8px rgba(0,0,0,.7),
+    0 7px 14px #000;
+}
+
+body.v13-active .v11-lcd-frame{
+  padding:18px;
+  border-radius:23px;
+  background:linear-gradient(145deg,#22272c,#050607 68%);
+  border:1px solid #59616a;
+  box-shadow:
+    inset 0 0 0 4px #090b0d,
+    inset 0 0 0 8px #171b1f,
+    0 18px 38px #000;
+}
+body.v13-active .v11-lcd{
+  border-radius:10px;
+  box-shadow:inset 0 0 22px rgba(0,0,0,.5);
+}
+body.v13-active .v11-lcd:after{
+  content:"";
+  position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(120deg,rgba(255,255,255,.12),transparent 20%,transparent 65%,rgba(255,255,255,.03)),
+    repeating-linear-gradient(90deg,rgba(255,255,255,.015) 0 1px,transparent 1px 3px);
+  mix-blend-mode:screen;
+}
+
+body.v13-active .v11-command-wheel{
+  width:112px;height:112px;
+  margin-top:8px;
+  background:repeating-conic-gradient(#697077 0 4deg,#161a1e 4deg 9deg);
+  border:5px solid #080a0c;
+  box-shadow:inset 0 0 0 2px #727a82,0 10px 18px #000;
+}
+body.v13-active .v11-command-wheel:after{
+  content:"";
+  position:absolute;inset:19px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#444b52,#111419 70%);
+  border:1px solid #6a727a;
+  pointer-events:none;
+}
+body.v13-active .v11-command-wheel button{z-index:2}
+body.v13-active .v11-command-wheel .center{
+  left:35px;top:36px;width:40px;height:40px;
+}
+
+body.v13-active .v11-camera-bottom{
+  height:90px;
+  padding:0 45px;
+}
+body.v13-active .v11-grip-texture{
+  width:205px;height:70px;
+  border-radius:40px;
+  background:
+    repeating-radial-gradient(circle,#30353a 0 1px,#111417 1px 3px);
+  box-shadow:inset 0 0 18px #000,0 2px rgba(255,255,255,.05);
+}
+body.v13-active .v11-logo-plate{
+  letter-spacing:.22em;color:#8b939a;
+}
+
+/* Integrated command dials, positioned relative to the camera */
+.v13-integrated-dial{
+  position:absolute;
+  z-index:20;
+  width:68px;height:68px;
+  border-radius:50%;
+  background:repeating-conic-gradient(#777e84 0 4deg,#1a1e22 4deg 9deg);
+  border:5px solid #090b0d;
+  box-shadow:inset 0 0 0 2px #7c848b,0 9px 16px #000;
+  cursor:grab;
+}
+.v13-integrated-dial:after{
+  content:"";
+  position:absolute;inset:15px;border-radius:50%;
+  background:radial-gradient(circle at 35% 30%,#50575d,#14181c 68%);
+  border:1px solid #737b82;
+}
+.v13-integrated-dial.front{right:155px;top:35px}
+.v13-integrated-dial.rear{right:35px;top:148px}
+.v13-integrated-dial .tick{
+  position:absolute;left:31px;top:2px;width:3px;height:10px;
+  background:#d7dadd;transform-origin:2px 31px;
+}
+.v13-integrated-dial .tick:nth-child(2){transform:rotate(60deg)}
+.v13-integrated-dial .tick:nth-child(3){transform:rotate(120deg)}
+.v13-integrated-dial .tick:nth-child(4){transform:rotate(180deg)}
+.v13-integrated-dial .tick:nth-child(5){transform:rotate(240deg)}
+.v13-integrated-dial .tick:nth-child(6){transform:rotate(300deg)}
+
+body.v13-active .v12-top-display{
+  top:96px;
+  min-width:560px;
+  border-color:#4f5861;
+  box-shadow:0 12px 28px rgba(0,0,0,.58);
+}
+body.v13-active .v12-status-ribbon{top:8px}
+
+@media(max-width:1180px){
+  .v13-integrated-dial{display:none}
+}

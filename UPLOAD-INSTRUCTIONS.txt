@@ -1,18 +1,10 @@
-VERSION 12.1 FIXED EDITION
+PHOTOGRAPHYCOURSES PRO 2.0 — STAGE 1
 
-This package fixes missing scene photographs and misplaced camera dials.
+1. Extract this ZIP.
+2. Upload every file and folder to the ROOT of your GitHub repository.
+3. Replace matching files when asked.
+4. Commit the changes.
+5. Wait for GitHub Pages to finish deploying.
+6. Open the simulator and press Ctrl + F5 on Windows.
 
-1. Extract the ZIP.
-2. Upload ALL files and folders to the root of your GitHub Pages repository.
-3. Make certain the new assets/scenes folder is uploaded.
-4. Replace all matching files, especially:
-   - index.html
-   - css/v12.css
-   - js/v12.js
-   - service-worker.js
-5. Commit the changes.
-6. Wait one or two minutes.
-7. Open the site and press Ctrl+F5.
-8. If old files remain, close the browser tab and reopen the site.
-
-Do not upload only index.html—the scene image files are required.
+Keep a copy of your previous version before replacing the files.

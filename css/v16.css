@@ -1,0 +1,14 @@
+
+.v16-coach{position:fixed;inset:0;pointer-events:none;z-index:180;font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+.v16-coach-toggle{position:fixed;right:20px;bottom:18px;pointer-events:auto;padding:11px 16px;border:1px solid #5d5018;border-radius:999px;background:#ffc400;color:#191400;font-weight:900;box-shadow:0 14px 35px rgba(0,0,0,.45)}
+.v16-coach-panel{position:fixed;right:18px;top:82px;width:390px;max-height:calc(100vh - 120px);overflow:auto;pointer-events:auto;border:1px solid #4b5560;border-radius:18px;background:linear-gradient(145deg,rgba(18,23,28,.99),rgba(7,10,13,.99));box-shadow:0 30px 90px rgba(0,0,0,.72);transform:translateX(430px);opacity:0;transition:.28s}
+.v16-coach-panel.open{transform:translateX(0);opacity:1}
+.v16-coach-panel header{display:flex;justify-content:space-between;align-items:center;padding:15px 17px;border-bottom:1px solid #303943}
+.v16-coach-panel header span{font-size:.66rem;letter-spacing:.15em;font-weight:900;color:#ffc400}
+.v16-coach-panel header button{width:34px;height:34px;border-radius:50%;border:1px solid #39434d;background:#151a1f;color:white}
+.v16-coach-body{padding:18px}
+.v16-coach-avatar{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#ffd64e,#bd8600);color:#181300;font-weight:1000;box-shadow:0 10px 22px rgba(0,0,0,.35)}
+.v16-coach-message{margin:14px 0;padding:15px;border-left:3px solid #ffc400;border-radius:9px;background:#0e1317;color:#d8dde2;line-height:1.55}
+.v16-coach-actions{display:grid;gap:8px}.v16-coach-actions button{padding:10px;border:1px solid #39434d;border-radius:8px;background:#151a1f;color:white;text-align:left}
+.v16-chat-row{display:grid;grid-template-columns:1fr auto;gap:8px;margin-top:14px}.v16-chat-row input{padding:11px;border:1px solid #39434d;border-radius:8px;background:#0e1317;color:white}.v16-chat-row button{padding:0 14px;border:0;border-radius:8px;background:#ffc400;color:#191400;font-weight:900}
+.v16-highlight{animation:v16glow 1s 2}@keyframes v16glow{50%{box-shadow:0 0 0 4px rgba(255,196,0,.3),0 0 30px rgba(255,196,0,.55)}}

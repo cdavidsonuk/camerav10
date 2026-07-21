@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#070809">
-<title>PhotographyCourses Pro Camera — Version 5.0 Phase 4</title>
+<title>PhotographyCourses Pro 2.0 — Stage 1 Professional Camera Interface</title>
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/camera.css">
 <link rel="stylesheet" href="css/academy.css">
@@ -22,6 +22,11 @@
 <link rel="stylesheet" href="css/v10.css">
 <link rel="stylesheet" href="css/v11.css">
 <link rel="stylesheet" href="css/v12.css">
+<link rel="stylesheet" href="css/v13.css">
+<link rel="stylesheet" href="css/v14.css">
+<link rel="stylesheet" href="css/v15.css">
+<link rel="stylesheet" href="css/v16.css">
+<link rel="stylesheet" href="css/pro-stage1.css">
 <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
@@ -31,9 +36,102 @@
 
 
 
-<section id="v12Overlay" class="v12-overlay" aria-label="Version 12 premium controls">
+
+
+<section id="v16Coach" class="v16-coach" aria-label="AI photography coach">
+  <button id="v16CoachToggle" class="v16-coach-toggle">AI Coach</button>
+  <aside id="v16CoachPanel" class="v16-coach-panel" aria-hidden="true">
+    <header><span>AI PHOTOGRAPHY COACH</span><button id="v16CoachClose">×</button></header>
+    <div class="v16-coach-body">
+      <div class="v16-coach-avatar">AI</div>
+      <div id="v16CoachMessage" class="v16-coach-message">Choose a scene and I’ll guide your settings.</div>
+      <div id="v16CoachActions" class="v16-coach-actions">
+        <button data-v16-action="suggest">Suggest settings</button>
+        <button data-v16-action="explain">Explain current setup</button>
+        <button data-v16-action="challenge">Give me a challenge</button>
+      </div>
+      <div class="v16-chat-row">
+        <input id="v16CoachInput" type="text" placeholder="Ask about shutter speed, aperture, ISO or focus">
+        <button id="v16CoachSend">Send</button>
+      </div>
+    </div>
+  </aside>
+</section>
+
+<section id="v14Explorer" class="v14-explorer" aria-label="Virtual DSLR Explorer">
+  <button id="v14ExplorerToggle" class="v14-explorer-toggle">Explore Camera</button>
+  <aside id="v14ExplorerPanel" class="v14-explorer-panel" aria-hidden="true">
+    <header><span>VIRTUAL DSLR EXPLORER</span><button id="v14ExplorerClose">×</button></header>
+    <div id="v14ExplorerContent">
+      <span class="v14-label">SELECT A CONTROL</span>
+      <h2>Learn the camera body</h2>
+      <p>Click a highlighted control on the camera to learn what it does.</p>
+    </div>
+  </aside>
+</section>
+
+
+<section id="proStage1Layer" class="pro-stage1-layer" aria-label="Professional camera controls">
+  <div class="pro-top-deck">
+    <div class="pro-power">
+      <span>OFF</span>
+      <button id="proPowerSwitch" aria-pressed="true"><i></i></button>
+      <span>ON</span>
+    </div>
+
+    <div class="pro-top-lcd" aria-label="Top camera display">
+      <div><small>MODE</small><strong id="proTopMode">M</strong></div>
+      <div><small>SHUTTER</small><strong id="proTopShutter">1/125</strong></div>
+      <div><small>APERTURE</small><strong id="proTopAperture">5.6</strong></div>
+      <div><small>ISO</small><strong id="proTopIso">100</strong></div>
+      <span class="pro-top-battery"><i></i></span>
+    </div>
+
+    <div id="proFrontDial" class="pro-hardware-dial pro-front-dial" tabindex="0" title="Front command dial — shutter speed">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+  </div>
+
+  <div id="proRearDial" class="pro-hardware-dial pro-rear-dial" tabindex="0" title="Rear command dial — aperture">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <button id="proViewfinderButton" class="pro-viewfinder-button">VIEWFINDER</button>
+  <button id="proQuickControlButton" class="pro-q-button">Q</button>
+
+  <div id="proViewfinder" class="pro-viewfinder" aria-hidden="true">
+    <div class="pro-viewfinder-mask">
+      <div class="pro-viewfinder-screen">
+        <img id="proViewfinderImage" alt="Electronic viewfinder scene">
+        <div class="pro-vf-grid"></div>
+        <div class="pro-vf-focus"><span></span></div>
+        <div class="pro-vf-readout">
+          <strong id="proVfShutter">1/125</strong>
+          <strong id="proVfAperture">F5.6</strong>
+          <strong id="proVfIso">ISO 100</strong>
+          <span id="proVfMeter">– · · 0 · · +</span>
+        </div>
+      </div>
+    </div>
+    <button id="proCloseViewfinder">EXIT VIEWFINDER</button>
+  </div>
+
+  <div id="proQuickPanel" class="pro-quick-panel" aria-hidden="true">
+    <header><strong>QUICK CONTROL</strong><button id="proCloseQuick">×</button></header>
+    <div class="pro-quick-grid">
+      <button data-pro-focus="v11ShutterSelect"><span>Shutter</span><b id="proQuickShutter">1/125</b></button>
+      <button data-pro-focus="v11ApertureSelect"><span>Aperture</span><b id="proQuickAperture">F5.6</b></button>
+      <button data-pro-focus="v11IsoSelect"><span>ISO</span><b id="proQuickIso">100</b></button>
+      <button data-pro-focus="v11AfMode"><span>Focus</span><b id="proQuickAf">AF-S</b></button>
+      <button data-pro-focus="v12WhiteBalance"><span>White balance</span><b id="proQuickWb">Auto</b></button>
+      <button data-pro-focus="v12DriveMode"><span>Drive</span><b id="proQuickDrive">Single shot</b></button>
+    </div>
+  </div>
+</section>
+
+<section id="v12Overlay" class="v12-overlay" aria-label="Version 16 premium controls">
   <div class="v12-status-ribbon">
-    <span><b>V12</b> Premium Interaction Edition</span>
+    <span><b>PRO 2.0</b> Professional Interface</span>
     <span id="v12SystemStatus">System ready</span>
   </div>
 
@@ -103,13 +201,13 @@
   <div id="v12Toast" class="v12-toast"></div>
 </section>
 
-<section id="v11App" class="v11-app" aria-label="Version 12 professional virtual camera">
+<section id="v11App" class="v11-app" aria-label="Pro 2.0 Stage 1 professional virtual camera">
   <header class="v11-topbar">
     <div class="v11-brand">
       <div class="v11-brand-mark">PC</div>
       <div>
         <strong>PHOTOGRAPHYCOURSES.COM</strong>
-        <span>Professional Virtual Camera · Version 12</span>
+        <span>Pro 2.0 · Stage 1 Professional Interface</span>
       </div>
     </div>
     <nav class="v11-top-actions">
@@ -346,7 +444,7 @@
   <dialog id="v11HelpDialog" class="v11-dialog v11-help-dialog">
     <button id="v11CloseHelp" class="v11-dialog-close">×</button>
     <span class="v11-label">QUICK GUIDE</span>
-    <h2>How to use Version 12</h2>
+    <h2>How to use Version 16</h2>
     <ol>
       <li>Choose a scene from the left.</li>
       <li>Set shutter speed, aperture and ISO.</li>
@@ -357,7 +455,7 @@
   </dialog>
 </section>
 
-<section id="v10Hub" class="v10-hub" aria-label="Version 12 commercial launch hub">
+<section id="v10Hub" class="v10-hub" aria-label="Version 16 commercial launch hub">
   <header class="v10-header">
     <div>
       <span class="v10-kicker">VERSION 10.0</span>
@@ -370,7 +468,7 @@
     </div>
   </header>
 
-  <nav class="v10-tabs" aria-label="Version 12 sections">
+  <nav class="v10-tabs" aria-label="Version 16 sections">
     <button class="active" data-v10-tab="overview">Overview</button>
     <button data-v10-tab="students">Students</button>
     <button data-v10-tab="builder">Course Builder</button>
@@ -562,7 +660,7 @@
         </article>
         <article class="v10-card">
           <h3>Offline app</h3>
-          <p>Version 12 includes a basic installable web-app configuration and service worker.</p>
+          <p>Version 16 includes a basic installable web-app configuration and service worker.</p>
           <button id="v10InstallApp" disabled>Install app when available</button>
           <button id="v10ClearAllData">Reset all local platform data</button>
           <small id="v10OfflineStatus">Checking offline support…</small>
@@ -577,7 +675,7 @@
   </footer>
 </section>
 
-<section id="v9Lab" class="v9-lab" aria-label="Version 12 advanced realism lab">
+<section id="v9Lab" class="v9-lab" aria-label="Version 16 advanced realism lab">
   <header class="v9-header">
     <div>
       <span class="v9-kicker">VERSION 9.0</span>
@@ -763,12 +861,12 @@
   </main>
 
   <footer class="v9-footer">
-    <span>Version 12 works locally in the browser and retains the Version 8 Academy.</span>
+    <span>Version 16 works locally in the browser and retains the Version 8 Academy.</span>
     <button id="v9ReturnAcademy">Return to Academy</button>
   </footer>
 </section>
 
-<section id="v8Academy" class="v8-academy" aria-label="Version 12 Virtual Photography Academy">
+<section id="v8Academy" class="v8-academy" aria-label="Version 16 Virtual Photography Academy">
   <header class="v8-hero">
     <div>
       <span class="v8-kicker">VERSION 8.0</span>
@@ -953,11 +1051,11 @@
   </dialog>
 </section>
 
-<section id="v7App" class="v7-app" aria-label="Version 12 immersive camera simulator">
+<section id="v7App" class="v7-app" aria-label="Version 16 immersive camera simulator">
   <header class="v7-topbar">
     <div class="v7-brand">
       <span class="v7-mark">PC</span>
-      <div><strong>VIRTUAL CAMERA LAB</strong><small>PhotographyCourses.com · Version 12</small></div>
+      <div><strong>VIRTUAL CAMERA LAB</strong><small>PhotographyCourses.com · Version 16</small></div>
     </div>
     <nav class="v7-nav" aria-label="Simulator sections">
       <button class="active" data-v7-tab="shoot">Shoot</button>
@@ -1074,7 +1172,7 @@
   <div>
     <span class="eyebrow">PhotographyCourses.com</span>
     <h1>Pro Camera <b>v11.0</b></h1>
-    <p>Version 12.0 — premium interaction edition</p>
+    <p>Version 16.0 — premium interaction edition</p>
   </div>
   <div class="status">
     <span id="engineStatus">Loading camera interface…</span>
@@ -1765,6 +1863,11 @@
 <script defer src="js/v10.js"></script>
 <script defer src="js/v11.js"></script>
 <script defer src="js/v12.js"></script>
+<script defer src="js/v13.js"></script>
+<script defer src="js/v14.js"></script>
+<script defer src="js/v15.js"></script>
+<script defer src="js/v16.js"></script>
+<script defer src="js/pro-stage1.js"></script>
 <script src="js/academy.js"></script>
 <script src="js/coach.js"></script>
 </div>

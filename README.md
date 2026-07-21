@@ -1,17 +1,29 @@
-# PhotographyCourses Virtual Camera — Version 12.1 Fixed Edition
+# PhotographyCourses Pro 2.0 — Stage 1
 
-This correction addresses the two problems visible in the Version 12 screenshot.
+This is the first stage of the professional simulator rebuild.
 
-## Fixed
+## Included
 
-- Added all six missing shooting-scene images
-- Mountain Lake, Portrait Studio, Waterfall, Cyclist, Night City and Wildlife now load locally
-- Repositioned the two Version 12 command dials inside the camera body
-- Dials now scale with the camera instead of using screen-percentage positions
-- Prevented the dials from covering the exposure controls
-- Updated the service-worker cache to Version 12.1
-- Changed caching to prefer newly uploaded files instead of stale cached files
+- Reworked DSLR/mirrorless-style camera body materials
+- Integrated top status LCD
+- Working power switch
+- Working front command dial for shutter speed
+- Working rear command dial for aperture
+- Full-screen electronic viewfinder mode
+- Quick Control panel
+- Keyboard shortcut: press `Q` to open Quick Control
+- Improved physical buttons, LCD bezel, mode dial and shutter button
+- Responsive fallback for mobile devices
+- Existing scenes, exposure engine, explorer and local AI coach retained
 
-## Upload note
+## Controls
 
-Upload every file and folder, including the new `assets/scenes` folder. After deployment, press Ctrl+F5. If an older service worker still appears, close the site tab and reopen it once.
+- Scroll or drag the front dial to change shutter speed.
+- Scroll or drag the rear dial to change aperture.
+- Press `VIEWFINDER` to enter the electronic viewfinder.
+- Press `Q` or click the round Q button for Quick Control.
+- Use the OFF/ON switch to power the simulated camera.
+
+## Next Stage
+
+Stage 2 will replace the current scene-effect layer with a more accurate photography rendering pipeline and calibrated lesson scenarios.
