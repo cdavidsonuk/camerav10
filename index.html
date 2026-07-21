@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#070809">
-<title>PhotographyCourses Pro 2.0 — Stage 1 Professional Camera Interface</title>
+<title>PhotographyCourses Pro 2.0 — Stage 2 Photography Engine</title>
 <link rel="stylesheet" href="css/base.css">
 <link rel="stylesheet" href="css/camera.css">
 <link rel="stylesheet" href="css/academy.css">
@@ -27,6 +27,7 @@
 <link rel="stylesheet" href="css/v15.css">
 <link rel="stylesheet" href="css/v16.css">
 <link rel="stylesheet" href="css/pro-stage1.css">
+<link rel="stylesheet" href="css/pro-stage2.css">
 <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
@@ -70,6 +71,119 @@
   </aside>
 </section>
 
+
+
+<section id="proStage2Layer" class="pro-stage2-layer" aria-label="Photography simulation engine">
+  <button id="proEngineToggle" class="pro-engine-toggle">ENGINE</button>
+
+  <aside id="proEnginePanel" class="pro-engine-panel" aria-hidden="true">
+    <header>
+      <div>
+        <span>PHOTOGRAPHY ENGINE 2.0</span>
+        <small>Real-time scene simulation</small>
+      </div>
+      <button id="proEngineClose">×</button>
+    </header>
+
+    <div class="pro-engine-body">
+      <section class="pro-engine-section">
+        <h3>Camera system</h3>
+        <label>Sensor
+          <select id="proSensorSize">
+            <option value="full">Full Frame</option>
+            <option value="apsc">APS-C</option>
+            <option value="mft">Micro Four Thirds</option>
+          </select>
+        </label>
+        <label>Image stabilisation
+          <select id="proStabilisation">
+            <option value="off">Off</option>
+            <option value="2">2 stops</option>
+            <option value="4">4 stops</option>
+            <option value="6">6 stops</option>
+          </select>
+        </label>
+        <label>Subject movement
+          <input id="proSubjectSpeed" type="range" min="0" max="100" value="20">
+        </label>
+      </section>
+
+      <section class="pro-engine-section">
+        <h3>Lens rendering</h3>
+        <label>Aperture blades
+          <select id="proBladeCount">
+            <option>7</option><option selected>9</option><option>11</option>
+          </select>
+        </label>
+        <label>Focus distance
+          <input id="proFocusDistance" type="range" min="1" max="100" value="45">
+        </label>
+        <label>Focus accuracy
+          <input id="proFocusAccuracy" type="range" min="0" max="100" value="92">
+        </label>
+      </section>
+
+      <section class="pro-engine-section">
+        <h3>Lighting</h3>
+        <label>Dynamic range
+          <input id="proDynamicRange" type="range" min="6" max="15" value="12">
+        </label>
+        <label>Light direction
+          <input id="proLightDirection" type="range" min="-100" max="100" value="15">
+        </label>
+        <label>Atmosphere
+          <select id="proAtmosphere">
+            <option value="clear">Clear</option>
+            <option value="mist">Mist</option>
+            <option value="rain">Rain</option>
+            <option value="dust">Dust</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="pro-engine-section pro-engine-readout">
+        <h3>Live analysis</h3>
+        <div><span>Exposure value</span><b id="proEvReadout">0.0 EV</b></div>
+        <div><span>Depth of field</span><b id="proDofReadout">Medium</b></div>
+        <div><span>Motion risk</span><b id="proMotionReadout">Low</b></div>
+        <div><span>Noise</span><b id="proNoiseReadout">Low</b></div>
+        <div><span>Highlight clipping</span><b id="proClipReadout">None</b></div>
+      </section>
+    </div>
+  </aside>
+
+  <aside id="proChallengePanel" class="pro-challenge-panel">
+    <header>
+      <span>STAGE 2 CHALLENGE</span>
+      <button id="proNewChallenge">NEW</button>
+    </header>
+    <h2 id="proChallengeTitle">Freeze the action</h2>
+    <p id="proChallengeText">Use a shutter speed fast enough to freeze a moving subject while keeping noise under control.</p>
+    <div class="pro-challenge-targets" id="proChallengeTargets"></div>
+    <div class="pro-challenge-progress"><i id="proChallengeProgress"></i></div>
+    <strong id="proChallengeStatus">Adjust the camera, then take a photo.</strong>
+  </aside>
+
+  <div id="proCaptureReview" class="pro-capture-review" aria-hidden="true">
+    <div class="pro-capture-card">
+      <header>
+        <span>CAPTURE REVIEW</span>
+        <button id="proCaptureClose">×</button>
+      </header>
+      <div class="pro-review-image-wrap">
+        <img id="proReviewImage" alt="Captured scene preview">
+        <canvas id="proHistogramCanvas" width="300" height="110"></canvas>
+      </div>
+      <div class="pro-review-score">
+        <div><small>TECHNICAL SCORE</small><strong id="proTechnicalScore">0</strong></div>
+        <div><small>CHALLENGE SCORE</small><strong id="proChallengeScore">0</strong></div>
+        <div><small>OVERALL</small><strong id="proOverallScore">0</strong></div>
+      </div>
+      <p id="proReviewFeedback"></p>
+      <button id="proRetakeButton">RETAKE</button>
+    </div>
+  </div>
+</section>
 
 <section id="proStage1Layer" class="pro-stage1-layer" aria-label="Professional camera controls">
   <div class="pro-top-deck">
@@ -207,7 +321,7 @@
       <div class="v11-brand-mark">PC</div>
       <div>
         <strong>PHOTOGRAPHYCOURSES.COM</strong>
-        <span>Pro 2.0 · Stage 1 Professional Interface</span>
+        <span>Pro 2.0 · Stage 2 Photography Engine</span>
       </div>
     </div>
     <nav class="v11-top-actions">
@@ -1868,6 +1982,7 @@
 <script defer src="js/v15.js"></script>
 <script defer src="js/v16.js"></script>
 <script defer src="js/pro-stage1.js"></script>
+<script defer src="js/pro-stage2.js"></script>
 <script src="js/academy.js"></script>
 <script src="js/coach.js"></script>
 </div>

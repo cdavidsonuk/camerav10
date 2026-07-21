@@ -1,29 +1,39 @@
-# PhotographyCourses Pro 2.0 — Stage 1
+# PhotographyCourses Pro 2.0 — Stage 2
 
-This is the first stage of the professional simulator rebuild.
+Stage 2 adds a calibrated browser-based photography simulation engine on top of the Stage 1 professional camera interface.
 
-## Included
+## Added in Stage 2
 
-- Reworked DSLR/mirrorless-style camera body materials
-- Integrated top status LCD
-- Working power switch
-- Working front command dial for shutter speed
-- Working rear command dial for aperture
-- Full-screen electronic viewfinder mode
-- Quick Control panel
-- Keyboard shortcut: press `Q` to open Quick Control
-- Improved physical buttons, LCD bezel, mode dial and shutter button
-- Responsive fallback for mobile devices
-- Existing scenes, exposure engine, explorer and local AI coach retained
+- Sensor size simulation: Full Frame, APS-C and Micro Four Thirds
+- Crop-factor behaviour
+- Image stabilisation settings
+- Subject movement controls
+- Camera-shake and motion-risk calculation
+- Focus distance and focus-accuracy controls
+- Aperture blade setting
+- Dynamic range simulation
+- Directional-light control
+- Clear, mist, rain and dust atmosphere modes
+- Live exposure-value analysis
+- Live depth-of-field, motion, noise and clipping readouts
+- Improved bokeh, blur, noise, lighting and focal-length rendering
+- Five interactive shooting challenges
+- Live challenge progress
+- Capture review after pressing the shutter
+- Technical, challenge and overall scores
+- Histogram preview
+- Specific feedback for exposure, blur, ISO, clipping and focus
+
+## Important note
+
+This is a browser simulation rather than a physically exact optical renderer. It is designed to teach cause and effect clearly and responsively on normal phones and computers.
 
 ## Controls
 
-- Scroll or drag the front dial to change shutter speed.
-- Scroll or drag the rear dial to change aperture.
-- Press `VIEWFINDER` to enter the electronic viewfinder.
-- Press `Q` or click the round Q button for Quick Control.
-- Use the OFF/ON switch to power the simulated camera.
+Open **ENGINE** at the top right to change sensor, stabilisation, subject speed, focus, lighting and atmosphere.
 
-## Next Stage
+Use the camera normally, then press the shutter to open Capture Review.
 
-Stage 2 will replace the current scene-effect layer with a more accurate photography rendering pipeline and calibrated lesson scenarios.
+## Next stage
+
+Stage 3 will add the adaptive instructor, saved learner profile, lesson recommendations and progress tracking.

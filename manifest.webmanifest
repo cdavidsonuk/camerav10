@@ -1,10 +1,10 @@
 {
-  "name": "PhotographyCourses Pro 2.0",
+  "name": "PhotographyCourses Pro 2.0 \u2014 Stage 2",
   "short_name": "PhotoCourses Pro",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#070a0d",
   "theme_color": "#070a0d",
-  "description": "Professional interactive virtual camera simulator \u2014 Stage 1",
+  "description": "Interactive professional virtual camera with real-time photography simulation",
   "icons": []
 }

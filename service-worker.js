@@ -1,6 +1,6 @@
 
 const CACHE="photography-camera-v12-1";
-const ASSETS=['./css/pro-stage1.css','./js/pro-stage1.js',
+const ASSETS=['./css/pro-stage2.css','./js/pro-stage2.js','./css/pro-stage1.css','./js/pro-stage1.js',
 "./","./index.html",
 "./css/v7.css","./css/v8.css","./css/v9.css","./css/v10.css","./css/v11.css","./css/v12.css",
 "./js/v7.js","./js/v8.js","./js/v9.js","./js/v10.js","./js/v11.js","./js/v12.js",

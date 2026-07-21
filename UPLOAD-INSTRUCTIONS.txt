@@ -1,4 +1,4 @@
-PHOTOGRAPHYCOURSES PRO 2.0 — STAGE 1
+PHOTOGRAPHYCOURSES PRO 2.0 — STAGE 2
 
 1. Extract this ZIP.
 2. Upload every file and folder to the ROOT of your GitHub repository.
@@ -7,4 +7,5 @@ PHOTOGRAPHYCOURSES PRO 2.0 — STAGE 1
 5. Wait for GitHub Pages to finish deploying.
 6. Open the simulator and press Ctrl + F5 on Windows.
 
-Keep a copy of your previous version before replacing the files.
+Stage 2 contains Stage 1, so you only need to upload this package.
+Keep a backup of your previous version before replacing the repository files.
