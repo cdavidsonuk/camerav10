@@ -1,0 +1,25 @@
+
+.v5p3-shell{max-width:1500px;margin:28px auto;padding:26px;border:1px solid rgba(255,255,255,.12);border-radius:24px;background:linear-gradient(145deg,rgba(25,28,34,.99),rgba(9,11,14,.99));box-shadow:0 28px 80px rgba(0,0,0,.38)}
+.v5p3-heading{display:flex;justify-content:space-between;gap:24px;align-items:flex-start}
+.v5p3-heading h2{margin:4px 0 8px;font-size:clamp(1.6rem,3vw,2.55rem)}
+.v5p3-heading p{max-width:790px;margin:0;color:#aeb4bd;line-height:1.55}
+.v5p3-level-card{min-width:135px;padding:13px 16px;border:1px solid rgba(255,255,255,.12);border-radius:16px;background:#11151a;text-align:center}
+.v5p3-level-card span{display:block;color:#7f8792;font-size:.65rem;letter-spacing:.14em}.v5p3-level-card strong{display:block;font:800 2rem monospace;color:#efd486}.v5p3-level-card small{color:#9ca4ae}
+.v5p3-progress-track{height:7px;margin:20px 0 22px;border-radius:99px;background:#111419;overflow:hidden}.v5p3-progress-track i{display:block;width:0;height:100%;background:linear-gradient(90deg,#d1ad5d,#f0d998);transition:width .35s}
+.v5p3-dashboard{display:grid;grid-template-columns:310px minmax(0,1fr) 280px;gap:16px}
+.v5p3-missions,.v5p3-workspace,.v5p3-student{padding:18px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.035)}
+.v5p3-section-title{display:flex;justify-content:space-between;align-items:start;gap:10px;margin-bottom:13px}.v5p3-section-title span,.v5p3-active-head span{font-size:.68rem;letter-spacing:.12em;color:#d6b66c}.v5p3-section-title h3{margin:3px 0 0}
+.v5p3-mission-list{display:grid;gap:8px}.v5p3-mission{width:100%;padding:12px;text-align:left;border-radius:12px!important;display:grid;grid-template-columns:38px 1fr auto;gap:10px;align-items:center;background:#111419!important}
+.v5p3-mission.active{border-color:#d6b66c!important;background:rgba(214,182,108,.08)!important}.v5p3-mission.done{border-color:rgba(104,227,143,.35)!important}
+.v5p3-mission-number{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#1d2228;font:700 .82rem monospace}.v5p3-mission strong,.v5p3-mission small{display:block}.v5p3-mission small{margin-top:3px;color:#7f8792}.v5p3-mission-score{font:700 .78rem monospace;color:#d9c078}
+.v5p3-active-head{display:flex;justify-content:space-between;gap:18px}.v5p3-active-head h3{font-size:1.55rem;margin:5px 0}.v5p3-active-head p{color:#9ba2ac;line-height:1.5}
+.v5p3-medal{display:grid;place-items:center;min-width:74px;height:74px;border-radius:50%;border:1px solid rgba(255,255,255,.15);background:#111419;font-size:1.8rem}
+.v5p3-requirements{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:17px 0}.v5p3-requirement{padding:10px;border-radius:10px;background:#111419}.v5p3-requirement span{display:block;color:#767f8a;font-size:.67rem}.v5p3-requirement strong{display:block;margin-top:4px;font:700 .85rem monospace}
+.v5p3-camera-controls{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;padding:14px;border-radius:14px;background:#111419}.v5p3-camera-controls label{display:grid;gap:7px;color:#aeb5be;font-size:.8rem}.v5p3-camera-controls select,.v5p3-camera-controls input{width:100%}.v5p3-camera-controls output{font-family:monospace;color:#efd486}
+.v5p3-actions{display:flex;flex-wrap:wrap;gap:9px;margin:16px 0}
+.v5p3-coach-card{padding:16px;border-left:3px solid #d6b66c;border-radius:12px;background:rgba(214,182,108,.06)}.v5p3-coach-card span{font-size:.67rem;letter-spacing:.12em;color:#d6b66c}.v5p3-coach-card h4{margin:6px 0}.v5p3-coach-card p{margin:0;color:#abb2bc;line-height:1.5}
+.v5p3-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}.v5p3-stat-grid div{padding:11px;border-radius:10px;background:#111419}.v5p3-stat-grid span{display:block;color:#737c87;font-size:.68rem}.v5p3-stat-grid strong{display:block;margin-top:4px;font:700 1rem monospace}
+.v5p3-achievements{margin-top:18px}.v5p3-achievement{display:flex;gap:10px;align-items:center;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.07);opacity:.42}.v5p3-achievement.unlocked{opacity:1}.v5p3-achievement-icon{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#171b20}.v5p3-achievement strong,.v5p3-achievement small{display:block}.v5p3-achievement small{color:#7f8792}
+.v5p3-reset{width:100%;margin-top:18px;background:transparent!important;color:#8d949d!important;border-color:rgba(255,255,255,.12)!important}
+@media(max-width:1200px){.v5p3-dashboard{grid-template-columns:270px 1fr}.v5p3-student{grid-column:1/-1}.v5p3-achievements #v5p3AchievementList{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}}
+@media(max-width:760px){.v5p3-shell{padding:18px}.v5p3-heading{flex-direction:column}.v5p3-dashboard{grid-template-columns:1fr}.v5p3-student{grid-column:auto}.v5p3-requirements,.v5p3-camera-controls{grid-template-columns:1fr}.v5p3-achievements #v5p3AchievementList{grid-template-columns:1fr}}

@@ -1,0 +1,19 @@
+
+.v5-control-deck{margin:28px auto;max-width:1500px;padding:26px;border:1px solid rgba(255,255,255,.12);border-radius:24px;background:linear-gradient(145deg,rgba(29,32,37,.98),rgba(12,14,17,.98));box-shadow:0 28px 80px rgba(0,0,0,.35)}
+.v5-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-bottom:22px}
+.v5-heading h2{margin:4px 0 8px;font-size:clamp(1.55rem,3vw,2.45rem)}
+.v5-heading p{max-width:760px;margin:0;color:#aeb4bd;line-height:1.55}
+.v5-kicker{font-size:.73rem;font-weight:800;letter-spacing:.17em;color:#d6b66c}
+.v5-status{display:flex;align-items:center;gap:9px;padding:10px 14px;border:1px solid rgba(255,255,255,.12);border-radius:999px;white-space:nowrap;background:rgba(255,255,255,.04)}
+.v5-status-dot{width:9px;height:9px;border-radius:50%;background:#70ed9a;box-shadow:0 0 16px rgba(112,237,154,.7)}
+.v5-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.v5-card{padding:18px;border:1px solid rgba(255,255,255,.1);border-radius:18px;background:rgba(255,255,255,.035)}
+.v5-card h3{margin:0 0 7px}.v5-card p{min-height:54px;margin:0 0 14px;color:#9da4ae;font-size:.92rem;line-height:1.45}
+.v5-preset-grid{display:grid;gap:8px}.v5-preset{text-align:left;display:flex;flex-direction:column;align-items:flex-start;padding:11px 12px}.v5-preset small{opacity:.65;margin-top:3px}
+.v5-action-row{display:flex;flex-wrap:wrap;gap:8px}.v5-primary{background:linear-gradient(135deg,#d4b263,#f0d68e)!important;color:#15120b!important;border-color:transparent!important;font-weight:800}
+.v5-locks{display:flex;gap:8px;margin-top:12px}.v5-locks span{padding:6px 9px;border-radius:8px;background:#121519;color:#717985;font:700 .78rem monospace}.v5-locks span.locked{background:rgba(83,224,132,.13);color:#8bf1ad}
+.v5-focus-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;max-width:210px;margin:3px 0 12px}
+.v5-focus-point{aspect-ratio:1;padding:0!important;border-radius:6px!important;background:#111419!important}.v5-focus-point.active{border-color:#79ec9f!important;box-shadow:0 0 0 2px rgba(121,236,159,.18) inset;background:rgba(121,236,159,.12)!important}
+#v5StorageMessage,#v5FocusLabel{display:block;margin-top:11px;color:#8f97a2}
+@media(max-width:1100px){.v5-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){.v5-control-deck{padding:18px}.v5-heading{flex-direction:column}.v5-grid{grid-template-columns:1fr}.v5-card p{min-height:0}}

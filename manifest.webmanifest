@@ -1,0 +1,10 @@
+{
+  "name": "PhotographyCourses Virtual Camera",
+  "short_name": "Photo Camera",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#070a0d",
+  "theme_color": "#070a0d",
+  "description": "Interactive photography academy and virtual camera simulator.",
+  "icons": []
+}

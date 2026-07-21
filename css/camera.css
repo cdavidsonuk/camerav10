@@ -1,0 +1,28 @@
+
+#threeContainer{position:absolute;inset:0;display:grid;place-items:center;overflow:hidden;background:
+ radial-gradient(circle at 50% 30%,rgba(62,72,86,.35),transparent 38%),
+ linear-gradient(145deg,#101318,#080a0d)}
+.viewer{min-height:690px}
+.dslr{position:relative;width:min(92%,900px);aspect-ratio:1.42;background:linear-gradient(145deg,#282b30 0%,#0d0f12 42%,#050607 100%);border-radius:70px 70px 42px 42px;box-shadow:0 38px 70px rgba(0,0,0,.68),inset 0 2px 2px rgba(255,255,255,.15),inset 0 -10px 20px rgba(0,0,0,.65);border:1px solid #3a3e44}
+.dslr:before{content:"";position:absolute;left:25%;right:25%;top:-12%;height:25%;border-radius:55px 55px 20px 20px;background:linear-gradient(#292c31,#090b0d);box-shadow:inset 0 2px 2px rgba(255,255,255,.12);border:1px solid #34383d}
+.dslr-grip{position:absolute;right:-2%;top:16%;width:22%;height:72%;border-radius:35px 45px 60px 25px;background:radial-gradient(circle at 55% 35%,#25282d,#08090b 70%);box-shadow:inset 10px 0 20px rgba(255,255,255,.04)}
+.dslr-screen{position:absolute;left:17%;top:23%;width:58%;height:58%;border:14px solid #08090a;border-radius:17px;background:#000;box-shadow:0 0 0 2px #383b40,inset 0 0 18px #000;overflow:hidden}
+.dslr-screen img{width:100%;height:100%;object-fit:cover;display:block;transition:filter .18s,transform .18s}
+.dslr-hud{position:absolute;inset:0;color:white;text-shadow:0 1px 3px #000;font:700 14px/1.2 ui-monospace,monospace;pointer-events:none}
+.dslr-hud .top{position:absolute;left:13px;right:13px;top:10px;display:flex;justify-content:space-between}.dslr-hud .bottom{position:absolute;left:13px;right:13px;bottom:10px;display:flex;justify-content:space-between;background:rgba(0,0,0,.45);padding:7px 9px;border-radius:5px}
+.dslr-focus{position:absolute;left:50%;top:50%;width:54px;height:38px;transform:translate(-50%,-50%);border:2px solid #e6e6e6;border-radius:3px;box-shadow:0 0 0 1px rgba(0,0,0,.6)}.dslr-focus.locked{border-color:#72ef75}
+.dslr-brand{position:absolute;left:5%;top:11%;font:800 17px/1 sans-serif;letter-spacing:.12em;color:#e9e9e9}
+.dslr-button,.dslr-dial{position:absolute;display:grid;place-items:center;color:#ddd;background:radial-gradient(circle at 38% 30%,#34373c,#0c0d0f 68%);border:1px solid #45494f;box-shadow:0 4px 10px #000,inset 0 1px 1px rgba(255,255,255,.15);cursor:pointer;user-select:none}
+.dslr-button{width:48px;height:48px;border-radius:50%;font:700 10px sans-serif}.dslr-button:active,.dslr-dial:active{transform:scale(.96)}
+.dslr-menu{left:5%;top:31%}.dslr-info{left:5%;top:43%}.dslr-play{right:7%;top:35%}.dslr-af{right:7%;top:24%}
+.dslr-dial{right:5%;top:49%;width:118px;height:118px;border-radius:50%;font:800 12px sans-serif;background:repeating-conic-gradient(#272a2f 0 5deg,#0b0d0f 5deg 10deg);box-shadow:0 5px 14px #000,inset 0 0 0 25px #111418,inset 0 0 0 27px #45484d}
+.dslr-dial:after{content:"SET";display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:#17191c;border:1px solid #474a50}
+.dslr-shutter{position:absolute;right:12%;top:-5%;width:82px;height:32px;border-radius:50%;background:radial-gradient(ellipse,#4b4e54,#111 65%);border:2px solid #555;box-shadow:0 5px 10px #000;cursor:pointer}
+.dslr-toplcd{position:absolute;right:29%;top:4%;width:145px;height:54px;border-radius:8px;background:#a5b99d;color:#182019;border:4px solid #111;font:800 13px/1.2 ui-monospace,monospace;padding:7px;box-sizing:border-box}
+.dslr-toplcd div{display:flex;justify-content:space-between}
+.dslr-wheel{position:absolute;right:3%;top:11%;width:92px;height:28px;border-radius:12px;background:repeating-linear-gradient(90deg,#090a0b 0 4px,#383b40 4px 6px);border:1px solid #444;cursor:pointer}
+.dslr-mode{position:absolute;left:12%;top:-4%;width:90px;height:36px;border-radius:50%;background:repeating-conic-gradient(#1f2226 0 12deg,#090a0c 12deg 24deg);border:2px solid #555;color:#f5d76c;font:800 15px sans-serif;display:grid;place-items:center;cursor:pointer}
+.dslr-caption{position:absolute;bottom:3%;left:0;right:0;text-align:center;color:#7f8791;font:600 12px sans-serif;letter-spacing:.08em}
+#fallback{display:none!important}
+.viewer-top,.viewer-bottom{z-index:5}
+@media(max-width:850px){.viewer{min-height:520px}.dslr{width:98%}.dslr-button{width:38px;height:38px}.dslr-dial{width:90px;height:90px}.dslr-screen{left:15%;width:60%}}
