@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="css/v8.css">
 <link rel="stylesheet" href="css/v9.css">
 <link rel="stylesheet" href="css/v10.css">
+<link rel="stylesheet" href="css/v11.css">
 <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
@@ -27,7 +28,262 @@
 
 
 
-<section id="v10Hub" class="v10-hub" aria-label="Version 10 commercial launch hub">
+
+<section id="v11App" class="v11-app" aria-label="Version 11 professional virtual camera">
+  <header class="v11-topbar">
+    <div class="v11-brand">
+      <div class="v11-brand-mark">PC</div>
+      <div>
+        <strong>PHOTOGRAPHYCOURSES.COM</strong>
+        <span>Professional Virtual Camera · Version 11</span>
+      </div>
+    </div>
+    <nav class="v11-top-actions">
+      <button id="v11Home">Home</button>
+      <button id="v11Academy">Academy</button>
+      <button id="v11Lab">Realism Lab</button>
+      <button id="v11Help">Quick Guide</button>
+      <button id="v11Fullscreen">Fullscreen</button>
+    </nav>
+  </header>
+
+  <main class="v11-workspace">
+    <aside class="v11-left">
+      <div class="v11-panel-head">
+        <span>SHOOTING SCENES</span>
+        <strong id="v11SceneCount">6 scenes</strong>
+      </div>
+
+      <div id="v11SceneList" class="v11-scene-list"></div>
+
+      <article class="v11-objective">
+        <span class="v11-label">CURRENT OBJECTIVE</span>
+        <h2 id="v11ObjectiveTitle">Sharp Landscape</h2>
+        <p id="v11ObjectiveText">Use a small aperture, low ISO and accurate focus.</p>
+        <ul id="v11ObjectiveList"></ul>
+      </article>
+
+      <article class="v11-coach-card">
+        <span class="v11-label">LIVE COACH</span>
+        <p id="v11CoachText">Select a scene and adjust the camera settings.</p>
+      </article>
+    </aside>
+
+    <section class="v11-stage-wrap">
+      <div class="v11-stage-toolbar">
+        <div class="v11-mode-cluster">
+          <span>MODE</span>
+          <button class="active" data-v11-mode="M">M</button>
+          <button data-v11-mode="A">A</button>
+          <button data-v11-mode="S">S</button>
+          <button data-v11-mode="P">P</button>
+        </div>
+        <div class="v11-exposure-meter">
+          <span>-3</span><i id="v11MeterBar"><em id="v11MeterNeedle"></em></i><span>+3</span>
+        </div>
+        <div class="v11-status-pills">
+          <span id="v11WeatherPill">Cloudy</span>
+          <span id="v11FocusPill">AF-S</span>
+          <span id="v11BatteryPill">100%</span>
+        </div>
+      </div>
+
+      <div class="v11-camera-shell">
+        <div class="v11-camera-top">
+          <div class="v11-hotshoe"></div>
+          <div class="v11-mode-dial"><span id="v11ModeDialText">M</span></div>
+          <div class="v11-shutter-cluster">
+            <button id="v11HalfPress">AF</button>
+            <button id="v11Shutter">●</button>
+          </div>
+        </div>
+
+        <div class="v11-camera-main">
+          <div class="v11-camera-left-controls">
+            <button id="v11MenuButton">MENU</button>
+            <button id="v11InfoButton">INFO</button>
+            <button id="v11PlaybackButton">▶</button>
+            <button id="v11DeleteButton">⌫</button>
+          </div>
+
+          <div class="v11-lcd-frame">
+            <div id="v11Lcd" class="v11-lcd">
+              <img id="v11SceneImage" alt="Virtual camera scene">
+              <div id="v11SceneTint" class="v11-scene-tint"></div>
+              <div id="v11GridOverlay" class="v11-grid-overlay"></div>
+              <div id="v11Histogram" class="v11-histogram">
+                <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+              </div>
+              <div id="v11FocusBox" class="v11-focus-box"></div>
+              <div id="v11FocusPeaking" class="v11-focus-peaking"></div>
+              <div id="v11ZebraOverlay" class="v11-zebra-overlay"></div>
+              <div class="v11-lcd-top">
+                <span id="v11LcdMode">M</span>
+                <span id="v11LcdAf">AF-S</span>
+                <span id="v11LcdRemaining">999</span>
+              </div>
+              <div class="v11-lcd-bottom">
+                <span id="v11LcdShutter">1/125</span>
+                <span id="v11LcdAperture">F5.6</span>
+                <span id="v11LcdIso">ISO 100</span>
+              </div>
+              <div id="v11CaptureFlash" class="v11-capture-flash"></div>
+            </div>
+          </div>
+
+          <div class="v11-camera-right-controls">
+            <button id="v11AfOn">AF-ON</button>
+            <div class="v11-command-wheel" id="v11CommandWheel">
+              <button data-wheel="up">▲</button>
+              <button data-wheel="left">◀</button>
+              <button class="center" data-wheel="center">SET</button>
+              <button data-wheel="right">▶</button>
+              <button data-wheel="down">▼</button>
+            </div>
+            <button id="v11QuickButton">Q</button>
+          </div>
+        </div>
+
+        <div class="v11-camera-bottom">
+          <div class="v11-logo-plate">PHOTOGRAPHY COURSES · PRO SYSTEM</div>
+          <div class="v11-grip-texture"></div>
+        </div>
+      </div>
+
+      <div class="v11-capture-bar">
+        <button id="v11ReviewShot">Review last shot</button>
+        <button id="v11ResetCamera">Reset settings</button>
+        <button id="v11TakePhoto" class="v11-primary">Take photograph</button>
+      </div>
+    </section>
+
+    <aside class="v11-right">
+      <section class="v11-control-card">
+        <div class="v11-panel-head"><span>EXPOSURE</span><strong id="v11ExposureStatus">Balanced</strong></div>
+
+        <label>
+          <span>Shutter speed</span>
+          <select id="v11ShutterSelect"></select>
+        </label>
+
+        <label>
+          <span>Aperture</span>
+          <select id="v11ApertureSelect"></select>
+        </label>
+
+        <label>
+          <span>ISO</span>
+          <select id="v11IsoSelect"></select>
+        </label>
+
+        <label>
+          <span>Exposure compensation</span>
+          <input id="v11ExposureComp" type="range" min="-3" max="3" step="0.3" value="0">
+          <output id="v11ExposureCompOut">0.0 EV</output>
+        </label>
+      </section>
+
+      <section class="v11-control-card">
+        <div class="v11-panel-head"><span>FOCUS & LENS</span><strong id="v11FocusStatus">Ready</strong></div>
+
+        <label>
+          <span>Autofocus mode</span>
+          <select id="v11AfMode">
+            <option value="AF-S">AF-S · Single</option>
+            <option value="AF-C">AF-C · Continuous</option>
+            <option value="MF">Manual focus</option>
+          </select>
+        </label>
+
+        <label>
+          <span>AF area</span>
+          <select id="v11AfArea">
+            <option>Single point</option>
+            <option>Zone</option>
+            <option>Wide</option>
+            <option>Tracking</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Focal length</span>
+          <input id="v11FocalLength" type="range" min="16" max="200" value="50">
+          <output id="v11FocalLengthOut">50mm</output>
+        </label>
+
+        <label>
+          <span>Manual focus distance</span>
+          <input id="v11FocusDistance" type="range" min="1" max="100" value="50">
+          <output id="v11FocusDistanceOut">5.0m</output>
+        </label>
+      </section>
+
+      <section class="v11-control-card">
+        <div class="v11-panel-head"><span>DISPLAY</span><strong>Live view</strong></div>
+        <div class="v11-toggle-grid">
+          <label><input id="v11GridToggle" type="checkbox" checked><span>Grid</span></label>
+          <label><input id="v11HistogramToggle" type="checkbox"><span>Histogram</span></label>
+          <label><input id="v11PeakingToggle" type="checkbox"><span>Peaking</span></label>
+          <label><input id="v11ZebraToggle" type="checkbox"><span>Zebras</span></label>
+        </div>
+      </section>
+
+      <section class="v11-control-card">
+        <div class="v11-panel-head"><span>ENVIRONMENT</span><strong id="v11LightStatus">Daylight</strong></div>
+
+        <label>
+          <span>Time of day</span>
+          <select id="v11TimeSelect">
+            <option value="day">Daylight</option>
+            <option value="golden">Golden hour</option>
+            <option value="blue">Blue hour</option>
+            <option value="night">Night</option>
+          </select>
+        </label>
+
+        <label>
+          <span>Weather</span>
+          <select id="v11WeatherSelect">
+            <option>Clear</option>
+            <option selected>Cloudy</option>
+            <option>Rain</option>
+            <option>Mist</option>
+          </select>
+        </label>
+      </section>
+    </aside>
+  </main>
+
+  <dialog id="v11ReviewDialog" class="v11-dialog">
+    <button id="v11CloseReview" class="v11-dialog-close">×</button>
+    <div class="v11-review-grid">
+      <div class="v11-review-image-wrap"><img id="v11ReviewImage" alt="Captured virtual photograph"></div>
+      <div class="v11-review-copy">
+        <span class="v11-label">INSTRUCTOR REVIEW</span>
+        <div class="v11-score-ring"><strong id="v11Score">0</strong><span>/100</span></div>
+        <h2 id="v11ReviewTitle">Photograph reviewed</h2>
+        <p id="v11ReviewFeedback"></p>
+        <div id="v11ScoreBreakdown" class="v11-score-breakdown"></div>
+        <button id="v11RetryShot">Try again</button>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog id="v11HelpDialog" class="v11-dialog v11-help-dialog">
+    <button id="v11CloseHelp" class="v11-dialog-close">×</button>
+    <span class="v11-label">QUICK GUIDE</span>
+    <h2>How to use Version 11</h2>
+    <ol>
+      <li>Choose a scene from the left.</li>
+      <li>Set shutter speed, aperture and ISO.</li>
+      <li>Choose autofocus mode and place the focus point.</li>
+      <li>Press AF or AF-ON to focus.</li>
+      <li>Take the photograph and review the instructor score.</li>
+    </ol>
+  </dialog>
+</section>
+
+<section id="v10Hub" class="v10-hub" aria-label="Version 11 commercial launch hub">
   <header class="v10-header">
     <div>
       <span class="v10-kicker">VERSION 10.0</span>
@@ -40,7 +296,7 @@
     </div>
   </header>
 
-  <nav class="v10-tabs" aria-label="Version 10 sections">
+  <nav class="v10-tabs" aria-label="Version 11 sections">
     <button class="active" data-v10-tab="overview">Overview</button>
     <button data-v10-tab="students">Students</button>
     <button data-v10-tab="builder">Course Builder</button>
@@ -232,7 +488,7 @@
         </article>
         <article class="v10-card">
           <h3>Offline app</h3>
-          <p>Version 10 includes a basic installable web-app configuration and service worker.</p>
+          <p>Version 11 includes a basic installable web-app configuration and service worker.</p>
           <button id="v10InstallApp" disabled>Install app when available</button>
           <button id="v10ClearAllData">Reset all local platform data</button>
           <small id="v10OfflineStatus">Checking offline support…</small>
@@ -247,7 +503,7 @@
   </footer>
 </section>
 
-<section id="v9Lab" class="v9-lab" aria-label="Version 10 advanced realism lab">
+<section id="v9Lab" class="v9-lab" aria-label="Version 11 advanced realism lab">
   <header class="v9-header">
     <div>
       <span class="v9-kicker">VERSION 9.0</span>
@@ -433,12 +689,12 @@
   </main>
 
   <footer class="v9-footer">
-    <span>Version 10 works locally in the browser and retains the Version 8 Academy.</span>
+    <span>Version 11 works locally in the browser and retains the Version 8 Academy.</span>
     <button id="v9ReturnAcademy">Return to Academy</button>
   </footer>
 </section>
 
-<section id="v8Academy" class="v8-academy" aria-label="Version 10 Virtual Photography Academy">
+<section id="v8Academy" class="v8-academy" aria-label="Version 11 Virtual Photography Academy">
   <header class="v8-hero">
     <div>
       <span class="v8-kicker">VERSION 8.0</span>
@@ -623,11 +879,11 @@
   </dialog>
 </section>
 
-<section id="v7App" class="v7-app" aria-label="Version 10 immersive camera simulator">
+<section id="v7App" class="v7-app" aria-label="Version 11 immersive camera simulator">
   <header class="v7-topbar">
     <div class="v7-brand">
       <span class="v7-mark">PC</span>
-      <div><strong>VIRTUAL CAMERA LAB</strong><small>PhotographyCourses.com · Version 10</small></div>
+      <div><strong>VIRTUAL CAMERA LAB</strong><small>PhotographyCourses.com · Version 11</small></div>
     </div>
     <nav class="v7-nav" aria-label="Simulator sections">
       <button class="active" data-v7-tab="shoot">Shoot</button>
@@ -743,8 +999,8 @@
 <header class="topbar">
   <div>
     <span class="eyebrow">PhotographyCourses.com</span>
-    <h1>Pro Camera <b>v10.0</b></h1>
-    <p>Version 10.0 — commercial launch platform</p>
+    <h1>Pro Camera <b>v11.0</b></h1>
+    <p>Version 11.0 — professional simulator rebuild</p>
   </div>
   <div class="status">
     <span id="engineStatus">Loading camera interface…</span>
@@ -1433,6 +1689,7 @@
 <script defer src="js/v8.js"></script>
 <script defer src="js/v9.js"></script>
 <script defer src="js/v10.js"></script>
+<script defer src="js/v11.js"></script>
 <script src="js/academy.js"></script>
 <script src="js/coach.js"></script>
 </div>

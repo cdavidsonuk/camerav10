@@ -1,25 +1,27 @@
-# PhotographyCourses Virtual Camera — Version 10.0
+# PhotographyCourses Virtual Camera — Version 11.0
 
-Version 10 is the Commercial Launch Edition. It adds the product, course-authoring and integration layer needed around the simulator.
+Version 11 is a major interface rebuild focused on realism, usability and commercial presentation.
 
-## Main features
+## Main improvements
 
-- Commercial launch dashboard
-- Student profile and personalised learning preferences
-- Local course and lesson builder
-- Course JSON export
-- Free and Pro access previews
-- WordPress and LMS bridge preview
-- LearnDash, Tutor LMS, LifterLMS, WooCommerce and custom API options
-- LMS event testing and event log
-- Learning analytics dashboard
-- Accessibility controls
-- Basic progressive web app manifest
-- Offline service worker
-- Version 9 Realism Lab retained
-- Version 8 Academy retained
-- Version 7 virtual camera retained
+- Completely redesigned full-screen camera simulator
+- New professional camera body
+- Larger and cleaner LCD live view
+- Physical-style shutter, AF, menu, info and command controls
+- Click-to-position autofocus point
+- Half-press autofocus and AF-ON workflow
+- Manual, Aperture, Shutter and Program mode controls
+- Exposure meter with live coaching
+- Exposure, focus, camera-setting and composition scoring
+- Instructor review dialog
+- Six photographic scenes
+- Scene-specific learning objectives
+- Grid, histogram, focus peaking and zebra overlays
+- Time-of-day and weather controls
+- Fullscreen support
+- Keyboard shortcuts: Space to capture, F to focus
+- Version 10, Version 9 and Version 8 remain accessible
 
-## Important limitation
+## Important note
 
-This package can preview WordPress and LMS communication, but it cannot securely process payments, create real WordPress users or store cloud progress by itself. Those features require a WordPress plugin or server-side API. Version 10 prepares the front end and event structure for that integration.
+The camera body is an original browser-rendered design. It is intentionally not an exact copy of a Canon, Nikon, Sony or other commercial camera model.

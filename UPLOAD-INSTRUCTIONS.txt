@@ -1,12 +1,11 @@
-PHOTOGRAPHY CAMERA VERSION 10.0
+PHOTOGRAPHY CAMERA VERSION 11.0
 
 1. Download and extract the ZIP.
-2. Open the camerav5 GitHub repository.
-3. Upload every extracted file and folder to the repository root.
+2. Open the camerav10 GitHub repository.
+3. Upload every extracted file and folder into the repository root.
 4. Replace matching files.
 5. Commit the changes.
 6. Wait one or two minutes.
-7. Refresh the GitHub Pages website using Ctrl+F5.
+7. Open the GitHub Pages address and press Ctrl+F5.
 
-Version 10 opens on the Commercial Launch dashboard.
-The Version 9 Realism Lab, Version 8 Academy and Version 7 camera remain accessible from the dashboard.
+Version 11 opens directly on the rebuilt professional virtual camera.
