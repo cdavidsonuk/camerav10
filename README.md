@@ -1,27 +1,26 @@
-# PhotographyCourses Virtual Camera — Version 11.0
+# PhotographyCourses Virtual Camera — Version 12.0
 
-Version 11 is a major interface rebuild focused on realism, usability and commercial presentation.
+Version 12 is the Premium Interaction Edition.
 
 ## Main improvements
 
-- Completely redesigned full-screen camera simulator
-- New professional camera body
-- Larger and cleaner LCD live view
-- Physical-style shutter, AF, menu, info and command controls
-- Click-to-position autofocus point
-- Half-press autofocus and AF-ON workflow
-- Manual, Aperture, Shutter and Program mode controls
-- Exposure meter with live coaching
-- Exposure, focus, camera-setting and composition scoring
-- Instructor review dialog
-- Six photographic scenes
-- Scene-specific learning objectives
-- Grid, histogram, focus peaking and zebra overlays
-- Time-of-day and weather controls
-- Fullscreen support
-- Keyboard shortcuts: Space to capture, F to focus
-- Version 10, Version 9 and Version 8 remain accessible
+- Premium top information display
+- Scrollable and draggable command dials
+- Shutter-speed dial control
+- Aperture dial control
+- Full camera-style menu system
+- Shooting, focus, display and sound menus
+- Drive mode, metering, white balance and picture profiles
+- Tracking sensitivity and eye-detection controls
+- Camera information panel
+- Button press animation and sound feedback
+- Premium camera-body lighting and materials
+- Improved shutter animation
+- Live status ribbon
+- Better feedback and interaction polish
+- Version 11 simulator remains the core camera system
+- Versions 8–10 remain accessible
 
 ## Important note
 
-The camera body is an original browser-rendered design. It is intentionally not an exact copy of a Canon, Nikon, Sony or other commercial camera model.
+The camera remains an original browser-rendered design rather than a licensed copy of a real manufacturer model.

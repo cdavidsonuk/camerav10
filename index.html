@@ -21,6 +21,7 @@
 <link rel="stylesheet" href="css/v9.css">
 <link rel="stylesheet" href="css/v10.css">
 <link rel="stylesheet" href="css/v11.css">
+<link rel="stylesheet" href="css/v12.css">
 <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
@@ -29,13 +30,86 @@
 
 
 
-<section id="v11App" class="v11-app" aria-label="Version 11 professional virtual camera">
+
+<section id="v12Overlay" class="v12-overlay" aria-label="Version 12 premium controls">
+  <div class="v12-status-ribbon">
+    <span><b>V12</b> Premium Interaction Edition</span>
+    <span id="v12SystemStatus">System ready</span>
+  </div>
+
+  <div id="v12TopDisplay" class="v12-top-display">
+    <div><span>MODE</span><strong id="v12TopMode">M</strong></div>
+    <div><span>SHUTTER</span><strong id="v12TopShutter">1/125</strong></div>
+    <div><span>APERTURE</span><strong id="v12TopAperture">F5.6</strong></div>
+    <div><span>ISO</span><strong id="v12TopIso">100</strong></div>
+    <div><span>AF</span><strong id="v12TopAf">AF-S</strong></div>
+  </div>
+
+  <div id="v12CommandDial" class="v12-command-dial" title="Drag or scroll to change shutter speed">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div id="v12RearDial" class="v12-rear-dial" title="Drag or scroll to change aperture">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div id="v12MenuPanel" class="v12-menu-panel" aria-hidden="true">
+    <header>
+      <span>CAMERA MENU</span>
+      <button id="v12CloseMenu">×</button>
+    </header>
+    <nav id="v12MenuTabs">
+      <button class="active" data-v12-menu="shooting">Shooting</button>
+      <button data-v12-menu="focus">Focus</button>
+      <button data-v12-menu="display">Display</button>
+      <button data-v12-menu="sound">Sound</button>
+    </nav>
+    <div class="v12-menu-view active" data-v12-menu-view="shooting">
+      <label>Drive mode<select id="v12DriveMode"><option>Single shot</option><option>Low continuous</option><option>High continuous</option><option>Self timer</option></select></label>
+      <label>Metering<select id="v12Metering"><option>Evaluative</option><option>Centre-weighted</option><option>Spot</option><option>Highlight weighted</option></select></label>
+      <label>White balance<select id="v12WhiteBalance"><option>Auto</option><option>Daylight</option><option>Cloudy</option><option>Shade</option><option>Tungsten</option></select></label>
+      <label>Picture profile<select id="v12PictureProfile"><option>Standard</option><option>Neutral</option><option>Vivid</option><option>Monochrome</option></select></label>
+    </div>
+    <div class="v12-menu-view" data-v12-menu-view="focus">
+      <label>Tracking sensitivity<input id="v12Tracking" type="range" min="1" max="5" value="3"><output id="v12TrackingOut">Balanced</output></label>
+      <label>Eye detection<select id="v12EyeDetect"><option>Auto</option><option>Human</option><option>Animal</option><option>Off</option></select></label>
+      <label>AF illumination<select id="v12AfIllumination"><option>Auto</option><option>On</option><option>Off</option></select></label>
+    </div>
+    <div class="v12-menu-view" data-v12-menu-view="display">
+      <label><input id="v12MenuGrid" type="checkbox" checked> Grid display</label>
+      <label><input id="v12MenuHistogram" type="checkbox"> Histogram</label>
+      <label><input id="v12MenuLevel" type="checkbox"> Electronic level</label>
+      <label><input id="v12MenuHighlight" type="checkbox"> Highlight warning</label>
+    </div>
+    <div class="v12-menu-view" data-v12-menu-view="sound">
+      <label>Camera sounds<select id="v12SoundMode"><option value="full">Full</option><option value="quiet">Quiet</option><option value="off">Off</option></select></label>
+      <label>Shutter volume<input id="v12ShutterVolume" type="range" min="0" max="100" value="70"></label>
+      <label>Focus confirmation<input id="v12FocusVolume" type="range" min="0" max="100" value="45"></label>
+    </div>
+  </div>
+
+  <div id="v12InfoPanel" class="v12-info-panel" aria-hidden="true">
+    <header><span>SHOOTING INFORMATION</span><button id="v12CloseInfo">×</button></header>
+    <div class="v12-info-grid">
+      <span>Scene<strong id="v12InfoScene">Mountain Lake</strong></span>
+      <span>Lens<strong id="v12InfoLens">50mm</strong></span>
+      <span>Exposure<strong id="v12InfoExposure">Balanced</strong></span>
+      <span>Focus<strong id="v12InfoFocus">Ready</strong></span>
+      <span>White balance<strong id="v12InfoWb">Auto</strong></span>
+      <span>Drive<strong id="v12InfoDrive">Single shot</strong></span>
+    </div>
+  </div>
+
+  <div id="v12Toast" class="v12-toast"></div>
+</section>
+
+<section id="v11App" class="v11-app" aria-label="Version 12 professional virtual camera">
   <header class="v11-topbar">
     <div class="v11-brand">
       <div class="v11-brand-mark">PC</div>
       <div>
         <strong>PHOTOGRAPHYCOURSES.COM</strong>
-        <span>Professional Virtual Camera · Version 11</span>
+        <span>Professional Virtual Camera · Version 12</span>
       </div>
     </div>
     <nav class="v11-top-actions">
@@ -272,7 +346,7 @@
   <dialog id="v11HelpDialog" class="v11-dialog v11-help-dialog">
     <button id="v11CloseHelp" class="v11-dialog-close">×</button>
     <span class="v11-label">QUICK GUIDE</span>
-    <h2>How to use Version 11</h2>
+    <h2>How to use Version 12</h2>
     <ol>
       <li>Choose a scene from the left.</li>
       <li>Set shutter speed, aperture and ISO.</li>
@@ -283,7 +357,7 @@
   </dialog>
 </section>
 
-<section id="v10Hub" class="v10-hub" aria-label="Version 11 commercial launch hub">
+<section id="v10Hub" class="v10-hub" aria-label="Version 12 commercial launch hub">
   <header class="v10-header">
     <div>
       <span class="v10-kicker">VERSION 10.0</span>
@@ -296,7 +370,7 @@
     </div>
   </header>
 
-  <nav class="v10-tabs" aria-label="Version 11 sections">
+  <nav class="v10-tabs" aria-label="Version 12 sections">
     <button class="active" data-v10-tab="overview">Overview</button>
     <button data-v10-tab="students">Students</button>
     <button data-v10-tab="builder">Course Builder</button>
@@ -488,7 +562,7 @@
         </article>
         <article class="v10-card">
           <h3>Offline app</h3>
-          <p>Version 11 includes a basic installable web-app configuration and service worker.</p>
+          <p>Version 12 includes a basic installable web-app configuration and service worker.</p>
           <button id="v10InstallApp" disabled>Install app when available</button>
           <button id="v10ClearAllData">Reset all local platform data</button>
           <small id="v10OfflineStatus">Checking offline support…</small>
@@ -503,7 +577,7 @@
   </footer>
 </section>
 
-<section id="v9Lab" class="v9-lab" aria-label="Version 11 advanced realism lab">
+<section id="v9Lab" class="v9-lab" aria-label="Version 12 advanced realism lab">
   <header class="v9-header">
     <div>
       <span class="v9-kicker">VERSION 9.0</span>
@@ -689,12 +763,12 @@
   </main>
 
   <footer class="v9-footer">
-    <span>Version 11 works locally in the browser and retains the Version 8 Academy.</span>
+    <span>Version 12 works locally in the browser and retains the Version 8 Academy.</span>
     <button id="v9ReturnAcademy">Return to Academy</button>
   </footer>
 </section>
 
-<section id="v8Academy" class="v8-academy" aria-label="Version 11 Virtual Photography Academy">
+<section id="v8Academy" class="v8-academy" aria-label="Version 12 Virtual Photography Academy">
   <header class="v8-hero">
     <div>
       <span class="v8-kicker">VERSION 8.0</span>
@@ -879,11 +953,11 @@
   </dialog>
 </section>
 
-<section id="v7App" class="v7-app" aria-label="Version 11 immersive camera simulator">
+<section id="v7App" class="v7-app" aria-label="Version 12 immersive camera simulator">
   <header class="v7-topbar">
     <div class="v7-brand">
       <span class="v7-mark">PC</span>
-      <div><strong>VIRTUAL CAMERA LAB</strong><small>PhotographyCourses.com · Version 11</small></div>
+      <div><strong>VIRTUAL CAMERA LAB</strong><small>PhotographyCourses.com · Version 12</small></div>
     </div>
     <nav class="v7-nav" aria-label="Simulator sections">
       <button class="active" data-v7-tab="shoot">Shoot</button>
@@ -1000,7 +1074,7 @@
   <div>
     <span class="eyebrow">PhotographyCourses.com</span>
     <h1>Pro Camera <b>v11.0</b></h1>
-    <p>Version 11.0 — professional simulator rebuild</p>
+    <p>Version 12.0 — premium interaction edition</p>
   </div>
   <div class="status">
     <span id="engineStatus">Loading camera interface…</span>
@@ -1690,6 +1764,7 @@
 <script defer src="js/v9.js"></script>
 <script defer src="js/v10.js"></script>
 <script defer src="js/v11.js"></script>
+<script defer src="js/v12.js"></script>
 <script src="js/academy.js"></script>
 <script src="js/coach.js"></script>
 </div>

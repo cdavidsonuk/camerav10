@@ -1,11 +1,12 @@
-PHOTOGRAPHY CAMERA VERSION 11.0
+PHOTOGRAPHY CAMERA VERSION 12.0
 
 1. Download and extract the ZIP.
 2. Open the camerav10 GitHub repository.
-3. Upload every extracted file and folder into the repository root.
+3. Upload every extracted file and folder to the repository root.
 4. Replace matching files.
 5. Commit the changes.
 6. Wait one or two minutes.
-7. Open the GitHub Pages address and press Ctrl+F5.
+7. Refresh the GitHub Pages website using Ctrl+F5.
 
-Version 11 opens directly on the rebuilt professional virtual camera.
+Version 12 opens on the premium virtual camera interface.
+Scroll or drag the new command dials to change shutter speed and aperture.
